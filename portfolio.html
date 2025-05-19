@@ -11,15 +11,23 @@
 </head>
 
 <body>
+    <header>
+        <nav class="top-nav" aria-label="Navigation principale">
+            <a href="/" class="back-button" aria-label="Retour au portfolio">
+                <img src="./assets/en-arriere.png" alt="" class="back-arrow" aria-hidden="true">
+                <span>Retour</span>
+            </a>
+        </nav>
+        <h1>Portfolio</h1>
+    </header>
     <main>
-        <a href="/">Retour</a>
+
         <section id="portfolio" aria-labelledby="portfolio-heading">
-            <h2 id="portfolio-heading">Portfolio</h2>
-            <p>Bienvenu.e sur le portfolio de DA SWAG</p>
+            <h2 id="portfolio-heading">Bienvenu.e sur le portfolio de DA SWAG</h2>
 
             <article class="project-article">
                 <h3>#Nom du projet</h3>
-                <img src="/assets/projet1.jpg" alt="Image du projet #Nom du projet">
+                <img src="/assets/projet1_image1.png" alt="Image du projet #Nom du projet">
                 <p>Création de l’identité visuelle du restaurant fast good Chick&Nat qui décline le poulet fermier sous
                     toutes ses formes.
                 </p>
@@ -32,7 +40,7 @@
                 <p>Création du design d'une campagne publicitaire pour le Conseil de l’Europe.</p>
                 <p><a href="/projet2.html">Voir le projet</a></p>
             </article>
-            
+
             <article>
                 <h3>#Nom du projet</h3>
                 <img src="/assets/projet3.jpg" alt="Image du projet #Nom du projet">
@@ -45,6 +53,19 @@
                 <p>Projet personnel d'illustration</p>
                 <p><a href="/projet4.html">Voir le projet</a></p>
             </article>
+        </section>
+
+        <section class="contact-info" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
+                    Contact
+                </a>
+                <a href="https://linkedin.com/in/votre-profil" class="contact-link"
+                    aria-label="Visiter mon profil LinkedIn" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </div>
         </section>
     </main>
 </body>
