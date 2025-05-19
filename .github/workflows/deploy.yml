@@ -31,11 +31,11 @@ jobs:
 
       - name: Minify CSS files
         run: |
-          find . -name "*.css" -exec bash -c 'postcss "$0" -o "dist/$0"' {} \;
+          find . -name "*.css" -exec bash -c 'postcss "$0" -o "dist/css/$0"' {} \;
   
       - name: Minify JS files
         run: |
-          find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/$0" --compress --mangle' {} \;
+          find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/js/$0" --compress --mangle' {} \;
 
       - name: Optimize and copy images
         run: |
