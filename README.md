@@ -16,7 +16,7 @@ Nous suivons une méthode collaborative basée sur le versionnage Git. Voici les
 
 ### Mise à jour régulière depuis develop
 
-### Fusion de develop dans la branche feature
+Fusion de develop dans la branche feature
 
 Résolution des conflits éventuels
 
