@@ -1,116 +1,101 @@
-/* Define CSS variables for modern browsers */
+@font-face {
+    font-family: "Expose";
+    src: url("../fonts/Expose-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Expose";
+    src: url("../fonts/Expose-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Expose";
+    src: url("../fonts/Expose-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Expose";
+    src: url("../fonts/Expose-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Variables */
 :root {
-    --color-background: #ffffff;
-    --color-text: #000000;
-    --color-primary: #003366;
-    --color-secondary: #006699;
-  
-    --font-base: 1rem;             /* 16px */
-    --font-h1: 2.25rem;            /* 36px */
-    --font-h2: 1.875rem;           /* 30px */
-    --font-h3: 1.5rem;             /* 24px */
-    --font-h4: 1.25rem;            /* 20px */
-    --line-height: 1.6;
-  
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
-  
-  /* CSS Reset & Base Styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 100%; /* 16px */
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background-color: #ffffff;
-    background-color: var(--color-background, #ffffff);
-  
-    color: #000000;
-    color: var(--color-text, #000000);
-  
-    font-family: system-ui, sans-serif;
-    font-family: var(--font-family, system-ui, sans-serif);
-  
-    font-size: 1rem;
-    font-size: var(--font-base, 1rem);
-  
-    line-height: 1.6;
-    line-height: var(--line-height, 1.6);
-  
-    padding: 1rem;
-  }
-  
-  /* Headings */
-  h1 {
+    --font-family: "Expose", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, sans-serif;
+}
+
+/* Usage */
+
+body {
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-weight: 700; /* Black */
     font-size: 2.25rem;
-    font-size: var(--font-h1, 2.25rem);
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
+}
+
+h2 {
+    font-weight: 700; /* Bold */
     font-size: 1.875rem;
-    font-size: var(--font-h2, 1.875rem);
-    margin-bottom: 1rem;
-  }
-  
-  h3 {
+}
+
+h3 {
+    font-weight: 500; /* Medium */
     font-size: 1.5rem;
-    font-size: var(--font-h3, 1.5rem);
-    margin-bottom: 0.75rem;
-  }
-  
-  h4 {
+}
+
+h4 {
+    font-weight: 400; /* Regular */
     font-size: 1.25rem;
-    font-size: var(--font-h4, 1.25rem);
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Links */
-  a {
-    color: #003366;
+}
+
+/* Links */
+a {
     color: var(--color-primary, #003366);
     text-decoration: underline;
-  }
-  
-  a:focus,
-  a:hover {
-    color: #006699;
+    font-weight: 400; /* Regular */
+}
+
+a:focus,
+a:hover {
     color: var(--color-secondary, #006699);
-  
-    outline: 2px solid #006699;
+
     outline: 2px solid var(--color-secondary, #006699);
     outline-offset: 2px;
-  }
-  
-  /* Buttons */
-  button {
+}
+
+/* Buttons */
+button {
     font: inherit;
-  
-    background-color: #003366;
+    font-weight: 700; /* Bold */
+
     background-color: var(--color-primary, #003366);
-  
-    color: #ffffff;
+
     color: var(--color-background, #ffffff);
-  
+
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
-  }
-  
-  button:focus,
-  button:hover {
-    background-color: #006699;
+}
+
+button:focus,
+button:hover {
     background-color: var(--color-secondary, #006699);
-  
-    outline: 2px solid #006699;
+
     outline: 2px solid var(--color-secondary, #006699);
     outline-offset: 2px;
-  }
-  
+}
