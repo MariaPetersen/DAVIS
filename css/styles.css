@@ -163,8 +163,8 @@ header {
     height: 20px;
 }
 
-.back-button:hover, 
-.back-button:focus {    
+.back-button:hover,
+.back-button:focus {
     outline-offset: 2px;
     text-decoration: underline;
     text-decoration-color: black;
