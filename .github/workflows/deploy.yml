@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p dist
           for file in $(find . -name "*.css"); do
-            out="dist/css/$file"
+            out="dist/$file"
             mkdir -p "$(dirname "$out")"
             npx postcss "$file" -o "$out"
           done
@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p dist
           for file in $(find . -name "*.js"); do
-            out="dist/js/$file"
+            out="dist/$file"
             mkdir -p "$(dirname "$out")"
             npx terser "$file" -o "$out" --compress --mangle
           done
