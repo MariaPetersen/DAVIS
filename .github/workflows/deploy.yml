@@ -21,6 +21,7 @@ jobs:
         run: | 
           npm install postcss postcss-cli cssnano terser
           npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
+          npm install -g imagemin-webp
 
       - name: Create output directory
         run: mkdir dist
@@ -47,6 +48,9 @@ jobs:
           mkdir -p dist/assets
           imagemin assets/*.{jpg,jpeg,png} \
             --plugin=mozjpeg --plugin=pngquant \
+            --out-dir=dist/assets
+          imagemin assets/*.webp \
+            --plugin=webp \
             --out-dir=dist/assets
 
       - name: Upload dist artifact
