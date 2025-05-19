@@ -47,7 +47,6 @@ jobs:
             npx terser "$file" -o "$out" --compress --mangle
           done
 
-
       - name: Optimize and copy images
         run: |
           mkdir -p dist/assets
