@@ -8,8 +8,6 @@
 }
 
 .home .button {
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     color: black;
     font-weight: bold;
