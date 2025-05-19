@@ -1,12 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVIS - devis</title>
-    <link rel="stylesheet" href="css/quote.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générer un devis - Directeur Artistique</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    header .tag {
+      background: #2ecc71;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+    }
+
+    form {
+      border: 1px solid black;
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #000;
+      border-radius: 0.5rem;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    .checkbox-group label,
+    .number-group label {
+      font-weight: normal;
+    }
+
+    button {
+      display: block;
+      background: black;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <div>
+      <h1>Générer un devis <span class="tag">Alessandro Garau</span></h1>
+      <p>Outil de génération de devis</p>
+    </div>
+    <a href="#">↶ retour</a>
+  </header>
+
+  <main>
+    <h2>Formulaire de devis</h2>
+
+    <form id="simulateur-devis">
+      <label>
+        Nom du projet
+        <input type="text" name="nom" required>
+      </label>
+
+      <label>
+        Deadline
+        <input type="date" name="deadline" required>
+      </label>
+
+      <label>
+        Description
+        <textarea name="description" required></textarea>
+      </label>
+
+      <fieldset>
+        <legend>Prestations</legend>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="prestation" value="logo" data-price="800"> Création de logo – 800 €</label>
+          <label><input type="checkbox" name="prestation" value="charte" data-price="1200"> Charte graphique – 1200 €</label>
+        </div>
+
+        <div class="number-group">
+          <label>Nombre de visuels pour réseaux – 100 €/visuel
+            <input type="number" name="visuels" value="0" min="0" data-price="100">
+          </label>
+
+          <label>Consulting créatif (en heures) – 100 €/h
+            <input type="number" name="consulting" value="0" min="0" data-price="100">
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Envoyer le devis</button>
+    </form>
+
+    <section aria-live="polite" id="resultat-devis" style="margin-top: 1rem; font-weight: bold;"></section>
+  </main>
+
+  <footer>
+    <a href="#">Contact</a>
+    <a href="#">LinkedIn</a>
+  </footer>
+
+  <script>
+    document.getElementById('simulateur-devis').onsubmit = function(e) {
+      e.preventDefault();
+      var total = 0;
+
+      // Prestations fixes cochées
+      var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+      for (var i = 0; i < checkboxes.length; i++) {
+        total += parseFloat(checkboxes[i].getAttribute('data-price'));
+      }
+
+      // Prestations à quantité variable
+      var quantifiables = document.querySelectorAll('input[type=number][data-price]');
+      for (var j = 0; j < quantifiables.length; j++) {
+        var qty = parseInt(quantifiables[j].value, 10) || 0;
+        var unit = parseFloat(quantifiables[j].getAttribute('data-price'));
+        total += qty * unit;
+      }
+
+      document.getElementById('resultat-devis').innerText = 'Estimation du devis : ' + total + ' €';
+    };
+  </script>
 </body>
 </html>
