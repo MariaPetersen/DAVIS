@@ -39,6 +39,7 @@ jobs:
           find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/$0" --compress --mangle' {} \;
   
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
