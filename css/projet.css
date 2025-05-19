@@ -28,7 +28,6 @@ h2 {
 .project-description {
     max-width: 800px;
     margin: 0;
-    padding-left: 20px;
 }
 
 .project-description p {
@@ -39,19 +38,25 @@ h2 {
 
 .visualization {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .image-gallery {
     display: flex;
     gap: 2rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    width: 100%;
+    align-self: flex-start;
 }
 
 .image-gallery figure {
     flex: 1;
     min-width: 300px;
     max-width: 500px;
+    margin: 0;
 }
 
 .project-image {
@@ -101,9 +106,5 @@ h2 {
     
     .image-gallery figure {
         max-width: 100%;
-    }
-
-    .project-description {
-        padding-left: 0;
     }
 }
