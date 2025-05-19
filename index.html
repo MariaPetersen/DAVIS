@@ -9,13 +9,15 @@
     </head>
 
     <body>
-        <header>
+        <header role="banner">
             <h1>NOM DE L'ARTISTE</h1>
         </header>
 
-        <main id="devis">
-            <section>
-                <h2>Simulez facilement vos devis en tant que client</h2>
+        <main id="devis" role="main">
+            <section aria-labelledby="section-devis">
+                <h2 id="section-devis">
+                    Simulez facilement vos devis en tant que client
+                </h2>
                 <p>
                     Vous êtes un client à la recherche de devis précis et
                     adaptés à vos projets créatifs ? Notre générateur de devis
@@ -24,37 +26,51 @@
                     clair et rapide des coûts pour vos projets artistiques, en
                     toute simplicité.
                 </p>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="quote.html" class="button"
-                                >Générer un devis</a
-                            >
-                        </li>
-                        <li>
-                            <a href="portfolio.html" class="button"
-                                >Portfolio</a
-                            >
-                        </li>
-                    </ul>
+                <nav role="navigation" aria-label="Navigation principale">
+                    <p>
+                        <a href="quote.html" class="button">Générer un devis</a>
+                        <a href="portfolio.html" class="button">Portfolio</a>
+                    </p>
                 </nav>
             </section>
         </main>
 
-        <footer id="contact">
-            <nav>
+        <footer role="contentinfo" id="contact">
+            <nav aria-label="Liens de contact">
                 <ul>
                     <li>
-                        <a href="mailto:contact@nom-artiste.com">Contact</a>
+                        <a href="mailto:contact@nom-artiste.com" role="button"
+                            >Contact</a
+                        >
                     </li>
                     <li>
                         <a
                             href="https://www.linkedin.com/in/profil-artiste/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Profil LinkedIn de NOM DE L'ARTISTE"
+                            role="button"
                         >
                             LinkedIn
                         </a>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="mailto:contact@nom-artiste.com"
+                                        >Contact</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.linkedin.com/in/profil-artiste/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </li>
                 </ul>
             </nav>
