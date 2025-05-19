@@ -9,24 +9,30 @@
         <link rel="stylesheet" href="css/home.css" />
     </head>
 
-    <body>
+    <body class="home" aria-label="Page d'accueil de l'artiste">
         <header role="banner">
             <h1>NOM DE L'ARTISTE</h1>
         </header>
 
         <main id="devis" role="main">
-            <section aria-labelledby="section-devis">
-                <h2 id="section-devis">
-                    Simulez facilement vos devis en tant que client
-                </h2>
-                <p>
-                    Vous êtes un client à la recherche de devis précis et
-                    adaptés à vos projets créatifs ? Notre générateur de devis
-                    conçu pour les Directeurs Artistiques vous permet de simuler
-                    facilement des estimations personnalisées. Obtenez un aperçu
-                    clair et rapide des coûts pour vos projets artistiques, en
-                    toute simplicité.
-                </p>
+            <section aria-labelledby="section-devis" class="devis-section">
+                <div class="left-column">
+                    <h2 id="section-devis">
+                        Simulez facilement vos devis en tant que client
+                    </h2>   
+                    <p>
+                        Vous êtes un client à la recherche de devis précis et
+                        adaptés à vos projets créatifs ? Notre générateur de devis
+                        conçu pour les Directeurs Artistiques vous permet de simuler
+                        facilement des estimations personnalisées. Obtenez un aperçu
+                        clair et rapide des coûts pour vos projets artistiques, en
+                        toute simplicité.
+                    </p>
+                    <h2 class="who-ami">
+                        Qui suis-je ?
+                    </h2>
+                    <p class="who-ami">Je suis un Directeur Artistique passionné par la création visuelle et l'innovation. Mon expertise réside dans la transformation des concepts en expériences visuelles uniques, qu'il s'agisse de branding, de design graphique, d'illustration ou de direction artistique pour des campagnes. Je travaille étroitement avec mes clients pour comprendre leurs besoins et traduire leurs idées en visuels percutants et mémorables. Mon objectif est de créer des designs qui non seulement captent l'attention mais qui racontent une histoire et ajoutent une véritable valeur à chaque projet.</p>
+                </div>
                 <nav role="navigation" aria-label="Navigation principale">
                     <a href="quote.html" class="button">Générer un devis</a>
                     <a href="portfolio.html" class="button">Portfolio</a>
@@ -34,27 +40,26 @@
             </section>
         </main>
 
-        <footer role="contentinfo" id="contact">
-            <nav aria-label="Liens de contact">
-                <ul>
-                    <li>
-                        <a href="mailto:contact@nom-artiste.com" role="button"
-                            >Contact</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/profil-artiste/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Profil LinkedIn de NOM DE L'ARTISTE"
-                            role="button"
-                        >
-                            LinkedIn
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
+         <section class="contact-info" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:votre@email.com" 
+                   class="contact-link"
+                   aria-label="Envoyer un email">
+                    Contact
+                </a>
+                <a href="https://linkedin.com/in/votre-profil" 
+                   class="contact-link"
+                   aria-label="Visiter mon profil LinkedIn"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Tous droits réservés</p>
+    </footer>
     </body>
 </html>
