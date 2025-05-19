@@ -6,42 +6,6 @@ body {
     padding: 20px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    flex-direction: row-reverse;
-}
-
-.top-nav {
-    margin: 0;
-}
-
-.back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 12px 24px;
-    color: black;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    position: relative;
-}
-
-.back-arrow {
-    width: 20px;
-    height: 20px;
-}
-
-.back-button:hover, 
-.back-button:focus {    
-    outline-offset: 2px;
-    text-decoration: underline;
-    text-decoration-color: black;
-    text-decoration-thickness: 2px;
-}
 
 h1 {
     color: #333;
