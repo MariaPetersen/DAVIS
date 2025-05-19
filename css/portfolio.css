@@ -1,0 +1,50 @@
+.portfolio-image {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio-article {
+    margin-bottom: 5px;
+}
+
+.portfolio-container {
+    border: solid 1px;
+    border-radius: var(--border-radius, 20px);
+    overflow: hidden;
+
+}
+
+.portfolio-content {
+    padding: 10px;
+}
+
+@media (min-width: 1025px) {
+    .image-container {
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .articles-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow-y: scroll;
+        gap: 10px;
+    }
+
+    .portfolio-article {
+        width: 380px;
+    }
+
+    .portfolio-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .portfolio-container {
+        width: 380px;
+        height: 380px;
+    }
+}

@@ -34,12 +34,17 @@
 :root {
     --font-family: "Expose", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, sans-serif;
+    --border-radius: 20px;
 }
 
 /* Usage */
 
 body {
     font-family: var(--font-family);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
@@ -98,6 +103,10 @@ button:hover {
 
     outline: 2px solid var(--color-secondary, #006699);
     outline-offset: 2px;
+}
+
+footer {
+    margin-top: 50px;
 }
 
 .contact-info {
