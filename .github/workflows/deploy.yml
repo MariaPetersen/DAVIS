@@ -20,6 +20,7 @@ jobs:
       - name: Install tools
         run: | 
           npm install postcss postcss-cli cssnano terser
+          npm install autoprefixer
           npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
           npm install -g imagemin-webp
 
