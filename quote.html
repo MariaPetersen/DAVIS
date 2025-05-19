@@ -1,12 +1,92 @@
+<!-- Page quote de Léo SUN-->
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVIS - devis</title>
-    <link rel="stylesheet" href="css/quote.css">
-</head>
-<body>
-    
-</body>
+<html lang="fr" class="html">
+  <head class="head">
+    <meta charset="UTF-8" class="meta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" class="meta" />
+    <title class="title-tag">DAVIS - SIMULATION</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/quote.css" />
+  </head>
+  <body class="body">
+    <header class="header-return">
+      <nav class="top-nav" aria-label="Navigation principale">
+          <a href="portfolio.html" class="back-button" aria-label="Retour au portfolio">
+              <img src="./assets/en-arriere.png" alt="" class="back-arrow" aria-hidden="true">
+              <span>Retour</span>
+          </a>
+      </nav>
+      <h1 class="title">Formulaire de simulation</h1>
+  </header>
+
+    <main class="main">
+      <form id="simulateur-devis" class="form">
+        <fieldset class="fieldset">
+          <legend class="legend">Prestations proposées</legend>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="prestation" value="logo" data-price="800" />
+              Création de logo – 800 €
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="prestation" value="charte" data-price="1200" />
+              Charte graphique – 1200 €
+            </label>
+          </div>
+
+          <div class="number-group">
+            <label for="visuels" class="form-label">
+              Visuels réseaux (100 €/visuel)
+            </label>
+            <input
+              id="visuels"
+              name="visuels"
+              type="number"
+              min="0"
+              data-price="100"
+              aria-describedby="info-visuels"
+              class="input-field"
+            />
+            <p id="info-visuels" class="helper-text">Nombre de visuels à produire.</p>
+
+            <label for="consulting" class="form-label">
+              Consulting créatif (en heures) – 100 €/h
+            </label>
+            <input
+              id="consulting"
+              name="consulting"
+              type="number"
+              min="0"
+              data-price="100"
+              aria-describedby="info-consulting"
+              class="input-field"
+            />
+            <p id="info-consulting" class="helper-text">
+              Nombre d'heures souhaitées pour l’accompagnement créatif.
+            </p>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Envoyer le devis</button>
+      </form>
+
+      <section aria-live="polite" id="resultat-devis" role="status" class="result"></section>
+    </main>
+
+    <footer>
+      <div class="contact-links">
+          <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
+              Contact
+          </a>
+          <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
+              rel="noopener noreferrer">
+              LinkedIn
+          </a>
+      </div>
+      <p>&copy; 2025 - Tous droits réservés</p>
+  </footer>
+
+    <script src="./js/quote.js"></script>
+  </body>
 </html>

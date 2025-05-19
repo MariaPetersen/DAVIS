@@ -1,0 +1,82 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install tools
+        run: | 
+          npm install postcss postcss-cli cssnano terser
+          npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
+
+      - name: Create output directory
+        run: mkdir dist
+
+      - name: Copy HTML files
+        run: |
+          find . -name "*.html" -exec cp --parents {} dist/ \;
+
+      - name: Minify CSS files
+        run: |
+          mkdir -p dist
+          for file in $(find . -name "*.css" -not -path "./dist/*"); do
+            out="dist/$file"
+            mkdir -p "$(dirname "$out")"
+            npx postcss "$file" -o "$out"
+          done
+  
+      - name: Minify JS files
+        run: |
+          find . -name "*.js" -exec cp --parents {} dist/ \;
+
+      - name: Optimize and copy images
+        run: |
+          mkdir -p dist/assets
+          imagemin assets/*.{jpg,jpeg,png} \
+            --plugin=mozjpeg --plugin=pngquant \
+            --out-dir=dist/assets
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+          
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pages: write
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
