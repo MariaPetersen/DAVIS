@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "terser": "^5.39.2"
+  }
+}
