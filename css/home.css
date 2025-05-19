@@ -1,0 +1,68 @@
+.home header {
+    flex-direction: row;
+}
+
+.home h2 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+
+.home .button {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.home .who-ami {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100vh;
+        padding-inline: 2rem;
+    }
+
+    .home header {
+        align-self: self-start;
+    }
+
+    .home .devis-section {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home .devis-section .button {
+        width: 360px;
+        height: 180px;
+        margin-left: 2rem;
+    }
+
+    .home .who-ami {
+        display: block;
+    }
+
+    .home .left-column {
+        max-width: 600px;
+    }
+}
