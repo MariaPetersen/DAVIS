@@ -40,7 +40,7 @@ jobs:
   
       - name: Minify JS files
         run: |
-          find . -name "*.js" -exec bash -c 'mkdir -p dist/js/$(dirname "$1") && npx terser "$1" -o "dist/js/$1" --compress --mangle' _ {} \;
+          find . -name "*.js" -exec cp --parents {} dist/ \;
 
       - name: Optimize and copy images
         run: |
