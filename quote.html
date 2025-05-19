@@ -1,86 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAVIS - simulation</title>
-  <link rel="stylesheet" href="./css/quote.html">
-</head>
-<body>
-  <header>
-    <div>
-      <h1>Générer une simulation</h1>
-      <p>Outil de génération de devis</p>
-    </div>
-    <a href="#">↶ retour</a>
-  </header>
+<html lang="fr" class="html">
+  <head class="head">
+    <meta charset="UTF-8" class="meta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" class="meta" />
+    <title class="title-tag">DAVIS - SIMULATION</title>
+    <link rel="stylesheet" href="./css/quote.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header-group">
+        <h1 class="title">Formulaire de simulation</h1>
+      </div>
+      <a href="#" class="link-retour">↶ retour</a>
+    </header>
 
-  <main>
-    <h2>Formulaire de simulation</h2>
+    <main class="main">
+      <form id="simulateur-devis" class="form">
+        <fieldset class="fieldset">
+          <legend class="legend">Prestations proposées</legend>
 
-    <form id="simulateur-devis">
-      <label for="nom">Nom du projet</label>
-      <input id="nom" name="nom" type="text" required aria-required="true" aria-describedby="aide-nom">
-      <p id="aide-nom">Indique le nom de ton projet de direction artistique.</p>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="prestation" value="logo" data-price="800" />
+              Création de logo – 800 €
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="prestation" value="charte" data-price="1200" />
+              Charte graphique – 1200 €
+            </label>
+          </div>
 
-      <label for="deadline">Deadline</label>
-      <input id="deadline" name="deadline" type="date" required aria-required="true">
+          <div class="number-group">
+            <label for="visuels" class="form-label">
+              Visuels réseaux (100 €/visuel)
+            </label>
+            <input
+              id="visuels"
+              name="visuels"
+              type="number"
+              min="0"
+              data-price="100"
+              aria-describedby="info-visuels"
+              class="input-field"
+            />
+            <p id="info-visuels" class="helper-text">Nombre de visuels à produire.</p>
 
-      <label for="description">Description</label>
-      <textarea id="description" name="description" required aria-required="true" aria-describedby="aide-description"></textarea>
-      <p id="aide-description">Décris brièvement les besoins du client ou le cadre de la prestation.</p>
+            <label for="consulting" class="form-label">
+              Consulting créatif (en heures) – 100 €/h
+            </label>
+            <input
+              id="consulting"
+              name="consulting"
+              type="number"
+              min="0"
+              data-price="100"
+              aria-describedby="info-consulting"
+              class="input-field"
+            />
+            <p id="info-consulting" class="helper-text">
+              Nombre d'heures souhaitées pour l’accompagnement créatif.
+            </p>
+          </div>
+        </fieldset>
 
-      <fieldset>
-        <legend>Prestations proposées</legend>
+        <button type="submit" class="btn">Envoyer le devis</button>
+      </form>
 
-        <div class="checkbox-group">
-          <label><input type="checkbox" name="prestation" value="logo" data-price="800"> Création de logo – 800 €</label>
-          <label><input type="checkbox" name="prestation" value="charte" data-price="1200"> Charte graphique – 1200 €</label>
-        </div>
+      <section aria-live="polite" id="resultat-devis" role="status" class="result"></section>
+    </main>
 
-        <div class="number-group">
-          <label for="visuels">Visuels réseaux (100 €/visuel)</label>
-          <input id="visuels" name="visuels" type="number" min="0" data-price="100" aria-describedby="info-visuels">
-          <p id="info-visuels">Nombre de visuels à produire.</p>
+    <footer class="footer">
+      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">LinkedIn</a>
+    </footer>
 
-          <label for="consulting">Consulting créatif (en heures) – 100 €/h</label>
-          <input id="consulting" name="consulting" type="number" min="0" data-price="100" aria-describedby="info-consulting">
-          <p id="info-consulting">Nombre d'heures souhaitées pour l’accompagnement créatif.</p>
-        </div>
-      </fieldset>
-
-      <button type="submit">Envoyer la simulation</button>
-    </form>
-
-    <section aria-live="polite" id="resultat-devis" role="status" style="margin-top: 1rem; font-weight: bold;"></section>
-  </main>
-
-  <footer>
-    <a href="#">Contact</a>
-    <a href="#">LinkedIn</a>
-  </footer>
-
-  <script>
-    document.getElementById('simulateur-devis').onsubmit = function(e) {
-      e.preventDefault();
-      var total = 0;
-
-      // Prestations fixes cochées
-      var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
-      for (var i = 0; i < checkboxes.length; i++) {
-        total += parseFloat(checkboxes[i].getAttribute('data-price'));
-      }
-
-      // Prestations à quantité variable
-      var quantifiables = document.querySelectorAll('input[type=number][data-price]');
-      for (var j = 0; j < quantifiables.length; j++) {
-        var qty = parseInt(quantifiables[j].value, 10) || 0;
-        var unit = parseFloat(quantifiables[j].getAttribute('data-price'));
-        total += qty * unit;
-      }
-
-      document.getElementById('resultat-devis').innerText = 'Estimation du devis : ' + total + ' €';
-    };
-  </script>
-</body>
+    <script src="./js/quote.js"></script>
+  </body>
 </html>
