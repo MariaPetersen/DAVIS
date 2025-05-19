@@ -18,7 +18,9 @@ jobs:
           node-version: '20'
 
       - name: Install tools
-        run: npm install postcss postcss-cli cssnano terser
+        run: | 
+          npm install postcss postcss-cli cssnano terser
+          npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
 
       - name: Create output directory
         run: mkdir dist
@@ -34,6 +36,13 @@ jobs:
       - name: Minify JS files
         run: |
           find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/$0" --compress --mangle' {} \;
+
+      - name: Optimize and copy images
+        run: |
+          mkdir -p dist/assets/images
+          imagemin assets/images/*.{jpg,jpeg,png} \
+            --plugin=mozjpeg --plugin=pngquant \
+            --out-dir=dist/assets/images
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
