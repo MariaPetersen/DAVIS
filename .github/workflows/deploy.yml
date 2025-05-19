@@ -33,14 +33,20 @@ jobs:
         run: |
           mkdir -p dist
           for file in $(find . -name "*.css"); do
-            out="dist/$file"
+            out="dist/css/$file"
             mkdir -p "$(dirname "$out")"
             npx postcss "$file" -o "$out"
           done
   
       - name: Minify JS files
         run: |
-          find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/js/$0" --compress --mangle' {} \;
+          mkdir -p dist
+          for file in $(find . -name "*.js"); do
+            out="dist/js/$file"
+            mkdir -p "$(dirname "$out")"
+            npx terser "$file" -o "$out" --compress --mangle
+          done
+
 
       - name: Optimize and copy images
         run: |
