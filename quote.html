@@ -21,24 +21,33 @@
 
     <main class="main">
       <form id="simulateur-devis" class="form">
-        <fieldset class="fieldset">
           <legend class="legend">Prestations proposées</legend>
 
           <div class="checkbox-group">
-            <label class="checkbox-label">
-              <input type="checkbox" name="prestation" value="logo" data-price="800" />
-              Création de logo – 800 €
-            </label>
-            <label class="checkbox-label">
-              <input type="checkbox" name="prestation" value="charte" data-price="1200" />
-              Charte graphique – 1200 €
-            </label>
+            <label class="checkbox-label"
+              ><input
+                type="checkbox"
+                name="prestation"
+                value="logo"
+                data-price="800"
+              />
+              Création de logo – 800 €</label
+            >
+            <label class="checkbox-label"
+              ><input
+                type="checkbox"
+                name="prestation"
+                value="charte"
+                data-price="1200"
+              />
+              Charte graphique – 1200 €</label
+            >
           </div>
 
           <div class="number-group">
-            <label for="visuels" class="form-label">
-              Visuels réseaux (100 €/visuel)
-            </label>
+            <label for="visuels" class="form-label"
+              >Visuels réseaux (100 €/visuel)</label
+            >
             <input
               id="visuels"
               name="visuels"
@@ -48,11 +57,13 @@
               aria-describedby="info-visuels"
               class="input-field"
             />
-            <p id="info-visuels" class="helper-text">Nombre de visuels à produire.</p>
+            <p id="info-visuels" class="helper-text">
+              Nombre de visuels à produire.
+            </p>
 
-            <label for="consulting" class="form-label">
-              Consulting créatif (en heures) – 100 €/h
-            </label>
+            <label for="consulting" class="form-label"
+              >Consulting créatif (en heures) – 100 €/h</label
+            >
             <input
               id="consulting"
               name="consulting"
@@ -66,12 +77,16 @@
               Nombre d'heures souhaitées pour l’accompagnement créatif.
             </p>
           </div>
-        </fieldset>
-
-        <button type="submit" class="btn">Envoyer le devis</button>
+        <button type="submit" class="btn">Obtenir une estimation</button>
+        <button type="button" class="btn" onclick="window.print()">Imprimer le devis</button>
       </form>
 
-      <section aria-live="polite" id="resultat-devis" role="status" class="result"></section>
+      <section
+        aria-live="polite"
+        id="resultat-devis"
+        role="status"
+        class="result"
+      ></section>
     </main>
 
     <footer>
