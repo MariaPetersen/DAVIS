@@ -63,16 +63,25 @@ jobs:
             --plugin=webp \
             --out-dir=dist/assets
 
-      - name: Subset and optimize WOFF fonts
+      - name: Subset and optimize WOFF and WOFF2 fonts
         run: |
           mkdir -p dist/fonts
           for font in $(find fonts/ -type f -name "*.woff"); do
             filename=$(basename "$font" .woff)
+      
+            # Generate WOFF
             pyftsubset "$font" \
               --output-file="dist/fonts/${filename}.woff" \
               --flavor=woff \
               --layout-features='*' \
               --with-zopfli \
+              --text="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÂÄÇÉÈÊËÎÏÔÖÙÛÜàâäçéèêëîïôöùûü0123456789"
+      
+            # Generate WOFF2
+            pyftsubset "$font" \
+              --output-file="dist/fonts/${filename}.woff2" \
+              --flavor=woff2 \
+              --layout-features='*' \
               --text="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÂÄÇÉÈÊËÎÏÔÖÙÛÜàâäçéèêëîïôöùûü0123456789"
           done
 
