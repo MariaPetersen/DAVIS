@@ -23,6 +23,9 @@ jobs:
           npm install autoprefixer
           npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
           npm install -g imagemin-webp
+          
+      - name: Install fonttools
+        run: pip install fonttools brotli zopfli
 
       - name: Create output directory
         run: mkdir dist
@@ -59,6 +62,19 @@ jobs:
           imagemin assets/*.webp \
             --plugin=webp \
             --out-dir=dist/assets
+
+      - name: Subset and optimize WOFF fonts
+        run: |
+          mkdir -p dist/fonts
+          for font in $(find assets/fonts -type f -name "*.woff"); do
+            filename=$(basename "$font" .woff)
+            pyftsubset "$font" \
+              --output-file="dist/fonts/${filename}.woff" \
+              --flavor=woff \
+              --layout-features='*' \
+              --with-zopfli \
+              --text="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÂÄÇÉÈÊËÎÏÔÖÙÛÜàâäçéèêëîïôöùûü0123456789"
+          done
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
