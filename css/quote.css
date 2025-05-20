@@ -1,20 +1,15 @@
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  background: #fff;
-  color: #000;
+:root {
+  --font-family: "Expose", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+* {
+  box-sizing: border-box;
 }
 
 .title {
   font-size: 1.5rem;
+  font-weight: 900;
   margin: 0;
 }
 
@@ -27,17 +22,16 @@ header {
 }
 
 form {
-  width: 100%;
-  padding: 1.5rem;
   border: 1px solid black;
   border-radius: 1rem;
-  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 100%;
 }
 
 label {
   display: block;
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .input-field,
@@ -48,6 +42,7 @@ label {
   border-radius: 0.5rem;
   margin-top: 0.25rem;
   font-size: 1rem;
+  font-family: var(--font-family);
 }
 
 .textarea-field {
@@ -56,12 +51,12 @@ label {
 
 .checkbox-group label,
 .number-group label {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .btn {
   display: block;
-  background: black;
+  background: #000000;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -69,6 +64,14 @@ label {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 1rem;
+  font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #006699;
+  outline: 2px solid #006699;
+  outline-offset: 2px;
 }
 
 footer {
@@ -78,11 +81,19 @@ footer {
 
 footer a {
   margin-right: 1rem;
-  text-decoration: none;
-  color: black;
+  text-decoration: underline;
+  color: #003366;
+  font-weight: 400;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #006699;
+  outline: 2px solid #006699;
+  outline-offset: 2px;
 }
 
 .result {
   margin-top: 1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
