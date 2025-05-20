@@ -1,6 +1,5 @@
-<!-- Page quote de Léo SUN-->
 <!DOCTYPE html>
-<html lang="fr" class="html">
+<html lang="fr">
   <head class="head">
     <meta charset="UTF-8" class="meta" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" class="meta" />
@@ -9,87 +8,65 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/quote.css" />
   </head>
-  <body class="body" aria-label="Page du générateur de devis">
+<body aria-label="Page du générateur de devis">
+  <main class="container">
     <header class="header-return">
       <nav class="top-nav" aria-label="Navigation principale">
           <a href="index.html" class="back-button" aria-label="Retour au portfolio">
               <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-              <span>Retour</span>
           </a>
       </nav>
-      <h1 class="title">Formulaire de simulation</h1>
-  </header>
+      <h1 class="title">Création d’un devis</h1>
+    </header>
+    <form id="devis-form">
+      <fieldset>
+        <legend>Informations client</legend>
+        <label>Nom du client
+          <input type="text" id="client-nom" required>
+        </label>
+        <label>Email
+          <input type="email" id="client-email" required>
+        </label>
+        <label>Date du devis
+          <input type="date" id="devis-date" required>
+        </label>
+        <label>Valable jusqu’au
+          <input type="date" id="devis-validite">
+        </label>
+      </fieldset>
 
-    <main class="main">
-      <form id="simulateur-devis" class="form">
-          <legend class="legend">Prestations proposées</legend>
+      <fieldset>
+        <legend>Prestations</legend>
+        <div id="prestations-container"></div>
+        <button type="button" id="add-prestation">Ajouter une prestation</button>
+      </fieldset>
 
-          <div class="checkbox-group">
-            <label class="checkbox-label"
-              ><input
-                type="checkbox"
-                name="prestation"
-                value="logo"
-                data-price="800"
-              />
-              Création de logo – 800 €</label
-            >
-            <label class="checkbox-label"
-              ><input
-                type="checkbox"
-                name="prestation"
-                value="charte"
-                data-price="1200"
-              />
-              Charte graphique – 1200 €</label
-            >
-          </div>
+      <button type="submit">Générer le devis</button>
+    </form>
 
-          <div class="number-group">
-            <label for="visuels" class="form-label"
-              >Visuels réseaux (100 €/visuel)</label
-            >
-            <input
-              id="visuels"
-              name="visuels"
-              type="number"
-              min="0"
-              data-price="100"
-              aria-describedby="info-visuels"
-              class="input-field"
-            />
-            <p id="info-visuels" class="helper-text">
-              Nombre de visuels à produire.
-            </p>
+    <section id="devis-output" hidden>
+      <hr>
+      <h2>DEVIS PROFESSIONNEL</h2>
+      <p><strong>Client :</strong> <span id="out-client-nom"></span> (<span id="out-client-email"></span>)</p>
+      <p><strong>Date :</strong> <span id="out-devis-date"></span></p>
+      <p><strong>Valide jusqu’au :</strong> <span id="out-devis-validite"></span></p>
 
-            <label for="consulting" class="form-label"
-              >Consulting créatif (en heures) – 100 €/h</label
-            >
-            <input
-              id="consulting"
-              name="consulting"
-              type="number"
-              min="0"
-              data-price="100"
-              aria-describedby="info-consulting"
-              class="input-field"
-            />
-            <p id="info-consulting" class="helper-text">
-              Nombre d'heures souhaitées pour l’accompagnement créatif.
-            </p>
-          </div>
-        <button type="submit" class="btn">Obtenir une estimation</button>
-        <button type="button" class="btn" onclick="window.print()">Imprimer le devis</button>
-      </form>
+      <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+          <tr>
+            <th>Prestations</th>
+            <th>Prix (€)</th>
+          </tr>
+        </thead>
+        <tbody id="out-prestations"></tbody>
+      </table>
 
-      <section
-        aria-live="polite"
-        id="resultat-devis"
-        role="status"
-        class="result"
-      ></section>
-    </main>
+      <p><strong>Total :</strong> <span id="out-total">0 €</span></p>
+      <p><em>Merci pour votre confiance.</em></p>
+      <p>Signature du client : ..............................................</p>
 
+      <button type="button" onclick="window.print()">Imprimer le devis</button>
+    </section>
     <footer>
       <div class="contact-links">
           <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
@@ -102,7 +79,7 @@
       </div>
       <p>&copy; 2025 - Tous droits réservés</p>
   </footer>
-
-    <script src="./js/quote.js"></script>
-  </body>
+  </main>
+  <script src="./js/quote.js"></script>
+</body>
 </html>
