@@ -34,16 +34,7 @@ cd davis
 ```
 
 2. Structure du projet 
-
-davis/
-├── index.html
-├── pages/             # Pages html
-├── fonts/            # Polices du projet
-├── css/
-│   └── styles.css    # Feuilles de styles
-├── js/
-│   └── main.js       # Logique JavaScript
-└── assets/           # Images, etc.
+<pre> ```text davis/ ├── index.html # Page d’accueil principale ├── pages/ # Pages HTML secondaires (ex : about.html, contact.html) │ ├── fonts/ # Polices personnalisées du projet (WOFF, WOFF2, etc.) │ ├── css/ │ └── styles.css # Feuille de styles principale │ ├── js/ │ └── main.js # Logique JavaScript principale │ └── assets/ # Ressources diverses : images, icônes, SVG, etc. ``` </pre>
 
 3. Ouvrir le projet dans le navigateur
 
