@@ -1,103 +1,114 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: system-ui, sans-serif;
-  background: #fff;
-  color: #000;
-}
-
-* {
-  box-sizing: border-box;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 900;
-  margin: 0;
-}
-
-.tag {
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
+  margin: 1rem 0;
 }
 
 form {
-  border: 1px solid black;
+  background: #fff;
+  border: 1px solid #ccc;
   border-radius: 1rem;
   padding: 1.5rem;
-  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 label {
   display: block;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-.input-field,
-.textarea-field {
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #000;
-  border-radius: 0.5rem;
   margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
   font-size: 1rem;
-  font-family: var(--font-family);
 }
 
-.textarea-field {
-  height: 150px;
-}
-.checkbox-group label,
-.number-group label {
-  font-weight: 400;
-}
-
-.btn {
-  display: block;
+button {
+  display: inline-block;
   background: #000000;
   color: white;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 1rem;
-  font-weight: 700;
 }
 
-.btn:hover,
-.btn:focus {
-  background: #006699;
-  outline: 2px solid #006699;
-  outline-offset: 2px;
+button:hover {
+  background: #003366;
 }
 
-footer {
-  margin-top: 2rem;
-  font-size: 0.9rem;
+#devis-output {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1.5rem;
 }
 
-footer a {
-  margin-right: 1rem;
-  text-decoration: underline;
-  color: #003366;
-  font-weight: 400;
+#devis-output h2 {
+  margin-top: 0;
 }
 
-footer a:hover,
-footer a:focus {
-  color: #006699;
-  outline: 2px solid #006699;
-  outline-offset: 2px;
+#devis-output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
-.result {
-  margin-top: 1rem;
-  font-weight: 700;
+#devis-output table th,
+#devis-output table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #devis-output,
+  #devis-output * {
+    visibility: visible;
+  }
+
+  #devis-output {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    z-index: 9999;
+  }
+
+  button,
+  .remove-btn,
+  #add-prestation {
+    display: none !important;
+  }
 }
