@@ -1,13 +1,92 @@
+<!-- Page d'accueil faite par Lucas Miranda -->
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVIS - accueil</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/home.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DAVIS - Accueil</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/home.css" />
+        <link
+            rel="preload"
+            href="ma-police.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+    </head>
+
+    <body class="home" aria-label="Page d'accueil de l'artiste">
+        <header role="banner">
+            <h1>NOM DE L'ARTISTE</h1>
+        </header>
+
+        <main id="devis" role="main">
+            <section aria-labelledby="section-devis" class="devis-section">
+                <div class="left-column">
+                    <h2 id="section-devis">
+                        Simulez facilement vos devis en tant que client
+                    </h2>
+                    <p>
+                        Vous êtes un client à la recherche de devis précis et
+                        adaptés à vos projets créatifs ? Notre générateur de
+                        devis conçu pour les Directeurs Artistiques vous permet
+                        de simuler facilement des estimations personnalisées.
+                        Obtenez un aperçu clair et rapide des coûts pour vos
+                        projets artistiques, en toute simplicité.
+                    </p>
+                    <h2 class="who-ami">Qui suis-je ?</h2>
+                    <p class="who-ami">
+                        Je suis un Directeur Artistique passionné par la
+                        création visuelle et l'innovation. Mon expertise réside
+                        dans la transformation des concepts en expériences
+                        visuelles uniques, qu'il s'agisse de branding, de design
+                        graphique, d'illustration ou de direction artistique
+                        pour des campagnes. Je travaille étroitement avec mes
+                        clients pour comprendre leurs besoins et traduire leurs
+                        idées en visuels percutants et mémorables. Mon objectif
+                        est de créer des designs qui non seulement captent
+                        l'attention mais qui racontent une histoire et ajoutent
+                        une véritable valeur à chaque projet.
+                    </p>
+                </div>
+                <nav role="navigation" aria-label="Navigation principale">
+                    <a
+                        href="quote.html"
+                        class="button"
+                        aria-label="Générer un devis"
+                        >Générer un devis</a
+                    >
+                    <a
+                        href="portfolio.html"
+                        class="button"
+                        aria-label="Voir le portfolio"
+                        >Portfolio</a
+                    >
+                </nav>
+            </section>
+        </main>
+
+        <footer>
+            <div class="contact-links">
+                <a
+                    href="mailto:votre@email.com"
+                    class="contact-link"
+                    aria-label="Envoyer un email à votre@email.com"
+                >
+                    Contact
+                </a>
+                <a
+                    href="https://linkedin.com/in/votre-profil"
+                    class="contact-link"
+                    aria-label="Visiter mon profil LinkedIn"
+                    rel="noopener noreferrer"
+                    hreflang="fr"
+                >
+                    LinkedIn
+                </a>
+            </div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+    </body>
 </html>

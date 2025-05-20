@@ -18,7 +18,14 @@ jobs:
           node-version: '20'
 
       - name: Install tools
-        run: npm install postcss postcss-cli cssnano terser
+        run: | 
+          npm install postcss postcss-cli cssnano terser
+          npm install autoprefixer
+          npm install -g imagemin-cli imagemin-mozjpeg imagemin-pngquant
+          npm install -g imagemin-webp
+          
+      - name: Install fonttools
+        run: pip install fonttools brotli zopfli
 
       - name: Create output directory
         run: mkdir dist
@@ -29,11 +36,45 @@ jobs:
 
       - name: Minify CSS files
         run: |
-          find . -name "*.css" -exec bash -c 'postcss "$0" -o "dist/$0"' {} \;
+          mkdir -p dist
+          for file in $(find . -name "*.css" -not -path "./dist/*"); do
+            out="dist/$file"
+            mkdir -p "$(dirname "$out")"
+            npx postcss "$file" -o "$out"
+          done
   
       - name: Minify JS files
         run: |
-          find . -name "*.js" -exec bash -c 'terser "$0" -o "dist/$0" --compress --mangle' {} \;
+          mkdir -p dist
+          find js/ -type f -name "*.js" -print0 | while IFS= read -r -d '' file; do
+            out="dist/$file"
+            echo "Processing: $file -> $out"
+            mkdir -p "$(dirname "$out")"
+            npx terser "$file" -o "$out" --compress --mangle || echo "Failed: $file"
+          done
+
+      - name: Optimize and copy images
+        run: |
+          mkdir -p dist/assets
+          imagemin assets/*.{jpg,jpeg,png} \
+            --plugin=mozjpeg --plugin=pngquant \
+            --out-dir=dist/assets
+          imagemin assets/*.webp \
+            --plugin=webp \
+            --out-dir=dist/assets
+
+      - name: Subset and optimize WOFF fonts
+        run: |
+          mkdir -p dist/fonts
+          for font in $(find fonts/ -type f -name "*.woff"); do
+            filename=$(basename "$font" .woff)
+            pyftsubset "$font" \
+              --output-file="dist/fonts/${filename}.woff" \
+              --flavor=woff \
+              --layout-features='*' \
+              --with-zopfli \
+              --text="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÂÄÇÉÈÊËÎÏÔÖÙÛÜàâäçéèêëîïôöùûü0123456789"
+          done
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
