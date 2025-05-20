@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Générateur de Devis Professionnel</title>
-</head>
+  <head class="head">
+    <meta charset="UTF-8" class="meta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" class="meta" />
+    <meta name="description" content="Générateur de devis pour un directeur artistique">
+    <title class="title-tag">DAVIS - SIMULATION</title>
+    <!-- <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/quote.css" /> -->
+  </head>
 <body>
   <main class="container">
-    <h1>Création d’un devis</h1>
-
+    <header class="header-return">
+      <nav class="top-nav" aria-label="Navigation principale">
+          <a href="index.html" class="back-button" aria-label="Retour au portfolio">
+              <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
+          </a>
+      </nav>
+      <h1 class="title">Création d’un devis</h1>
+    </header>
     <form id="devis-form">
       <fieldset>
         <legend>Informations client</legend>
@@ -58,6 +67,18 @@
 
       <button type="button" onclick="window.print()">Imprimer le devis</button>
     </section>
+    <footer>
+      <div class="contact-links">
+          <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
+              Contact
+          </a>
+          <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
+              rel="noopener noreferrer">
+              LinkedIn
+          </a>
+      </div>
+      <p>&copy; 2025 - Tous droits réservés</p>
+  </footer>
   </main>
   <script src="./js/quote.js"></script>
 </body>
