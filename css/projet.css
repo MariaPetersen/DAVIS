@@ -1,28 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.4;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
 
 h1 {
     color: #333;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h2 {
     color: #333;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .project-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
+    flex: 1;
 }
 
 .project-description {
@@ -32,20 +35,21 @@ h2 {
 
 .project-description p {
     color: #444;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 .visualization {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    flex: 1;
 }
 
 .image-gallery {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
@@ -54,8 +58,8 @@ h2 {
 
 .image-gallery figure {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 250px;
+    max-width: 350px;
     margin: 0;
 }
 
@@ -64,28 +68,6 @@ h2 {
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-}
-
-.contact-info {
-    align-self: flex-start;
-    margin-top: 2rem;
-}
-
-.contact-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.contact-link {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-link:hover,
-.contact-link:focus {
-    text-decoration: underline;
-    outline: none;
 }
 
 :focus-visible {
