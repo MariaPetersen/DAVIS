@@ -64,24 +64,24 @@ Toutes les données sont gérées côté client (dans localStorage ou objets JS)
 
 Le projet peut être déployé tel quel sur GitHub Pages, Netlify ou tout hébergement statique
 
-## ♿ Accessibilité (WCAG 2.1 AAA)
-DAvis est développé selon les standards WCAG 2.1 niveau AAA, garantissant un accès équitable à tous les utilisateurs.
+## ♿ Accessibilité (WCAG 2.2 AAA)
+DAvis est développé selon les standards WCAG 2.2 niveau AAA, garantissant un accès équitable à tous les utilisateurs, y compris ceux en situation de handicap.
 
 Principes respectés :
-Perceptible : contrastes > 7:1, textes alternatifs, contenus clairs
+Perceptible : contrastes > 7:1, textes alternatifs, contenus clairs et structurés
 
-Utilisable : navigation clavier complète, composants interactifs accessibles
+Utilisable : navigation 100 % clavier, composants interactifs accessibles, indicateurs de focus visibles
 
-Compréhensible : interfaces prévisibles, langage clair
+Compréhensible : interfaces cohérentes, langage simple, prévention des erreurs renforcée
 
-Robuste : compatibilité avec lecteurs d’écran (NVDA, VoiceOver)
+Robuste : compatibilité éprouvée avec les technologies d’assistance (NVDA, VoiceOver, etc.)
 
 Mise en œuvre :
-HTML sémantique (header, main, section, etc.)
+HTML sémantique (header, main, section, nav, figure, etc.)
 
-Attributs ARIA selon les rôles
+Attributs ARIA conformes aux rôles et aux usages
 
-Tests avec Lighthouse et VoiceOver
+Tests réguliers avec Lighthouse et VoiceOver
 
 ## 🚀 Déploiement continu avec GitHub Actions
 Le projet DAvis utilise GitHub Actions pour automatiser l’optimisation et le déploiement sur GitHub Pages à chaque push sur la branche main.

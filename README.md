@@ -36,18 +36,18 @@ DAvis est conçu dans une démarche d'inclusion numérique et d'efficacité tech
 
 🧩 Technologies modernes : HTML5, ARIA, composants responsives et pratiques de développement inclusif pour une expérience fluide et homogène.
 
-### 🔍 Résumé des normes WCAG 2.1 AAA :
-Les Web Content Accessibility Guidelines (WCAG) sont un ensemble de recommandations techniques visant à rendre le contenu web accessible. Le niveau AAA est le plus exigeant et repose sur quatre grands principes :
+### 🔍 Résumé des normes WCAG 2.2 AAA :
+Les Web Content Accessibility Guidelines (WCAG) 2.2 sont un ensemble de recommandations techniques destinées à rendre le contenu web accessible à tous. Le niveau AAA est le plus strict, reposant sur quatre principes fondamentaux :
 
-- Perceptible : contenu visible et compréhensible, même pour les utilisateurs avec des déficiences sensorielles.
+- Perceptible : le contenu doit être visible et compréhensible, même pour les personnes ayant des déficiences sensorielles (vue, audition, etc.).
 
-- Utilisable : toutes les fonctionnalités doivent être accessibles au clavier et intuitives à utiliser.
+- Utilisable : toutes les fonctionnalités doivent pouvoir être utilisées au clavier et être faciles à manipuler.
 
-- Compréhensible : les informations et les interactions doivent être claires et prévisibles.
+- Compréhensible : les informations et les interactions doivent être claires, cohérentes et prévisibles.
 
-- Robuste : le site doit être compatible avec une grande variété de technologies d’assistance.
+- Robuste : le site doit fonctionner avec un large éventail de technologies d’assistance, actuelles et futures.
 
-DAvis intègre ces principes dès la conception pour garantir une expérience universelle, éthique et durable.
+DAvis intègre ces principes dès la conception pour garantir une expérience inclusive, éthique et durable pour tous les utilisateurs.
 
 ## 🚀 Participer au projet : workflow de développement
 Nous suivons une méthode collaborative basée sur le versionnage Git. Voici les principales étapes du workflow :
