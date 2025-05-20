@@ -43,11 +43,11 @@ jobs:
       - name: Minify JS files
         run: |
           mkdir -p dist
-          find . -name "*.js" -not -path "./dist/*" -print0 | while IFS= read -r -d '' file; do
+          find js/ -type f -name "*.js" -print0 | while IFS= read -r -d '' file; do
             out="dist/$file"
             echo "Processing: $file -> $out"
             mkdir -p "$(dirname "$out")"
-            npx terser "$file" -o "$out" --compress --mangle || echo "Failed to minify $file"
+            npx terser "$file" -o "$out" --compress --mangle || echo "Failed: $file"
           done
 
       - name: Optimize and copy images
