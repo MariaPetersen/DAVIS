@@ -1,15 +1,55 @@
 # DAVIS
-## 🎨 Le projet
-DAVIS est le site web personnel d’un directeur artistique freelance.
-Il permet aux visiteurs de :
+## 🎨 DAvis – Générateur de devis pour directeurs artistiques
+DAvis est une application pensée pour simplifier la création de devis professionnels destinés aux directeurs artistiques, freelances ou en agence. Elle permet de générer rapidement des devis clairs, personnalisables et adaptés aux spécificités des métiers créatifs.
 
-découvrir son portfolio créatif,
+### 🧩 Fonctionnalités principales :
+Génération rapide de devis avec des modèles adaptés aux prestations artistiques.
 
-simuler le coût d'une prestation personnalisée grâce à un outil interactif.
+Personnalisation des prestations : ajout facile de lignes, ajustement des tarifs, etc.
 
-Ce projet met en avant à la fois la créativité du DA et des fonctionnalités techniques modernes.
+Base de prestations fréquentes avec descriptions pré-remplies pour gagner du temps
 
-## 🚀 Workflow de développement
+- Calcul automatique du total, des remises et de la TVA
+
+- Export en PDF professionnel prêt à être envoyé au client
+
+- Interface intuitive et épurée
+
+### 🎯 Objectif :
+Offrir un outil simple, rapide et fiable pour permettre aux directeurs artistiques de valoriser leur travail à travers des devis clairs, bien présentés et alignés avec les standards du métier.
+
+### 💡 Pour qui ?
+- Directeurs artistiques freelance
+
+- Graphistes, illustrateurs, photographes
+
+- Studios de création ou agences
+
+## ♿ Accessibilité & performance
+DAvis est conçu dans une démarche d'inclusion numérique et d'efficacité technique, avec une attention particulière portée à l'accessibilité et à la performance :
+
+💎 Conformité aux normes WCAG 2.1 AAA, le plus haut niveau d’exigence en matière d’accessibilité, afin de garantir un accès équitable à tous les utilisateurs, y compris ceux en situation de handicap visuel, auditif, moteur ou cognitif.
+
+🎯 Navigation entièrement accessible au clavier, interface compréhensible par les lecteurs d’écran, contrastes élevés et personnalisables, structure sémantique rigoureuse, et contenu compréhensible à tous les niveaux.
+
+⚡ Code front-end optimisé pour garantir des performances élevées, avec des temps de chargement rapides et une compatibilité sur tous les appareils, y compris mobiles et connexions lentes.
+
+🧩 Technologies modernes : HTML5, ARIA, composants responsives et pratiques de développement inclusif pour une expérience fluide et homogène.
+
+### 🔍 Résumé des normes WCAG 2.1 AAA :
+Les Web Content Accessibility Guidelines (WCAG) sont un ensemble de recommandations techniques visant à rendre le contenu web accessible. Le niveau AAA est le plus exigeant et repose sur quatre grands principes :
+
+- Perceptible : contenu visible et compréhensible, même pour les utilisateurs avec des déficiences sensorielles.
+
+- Utilisable : toutes les fonctionnalités doivent être accessibles au clavier et intuitives à utiliser.
+
+- Compréhensible : les informations et les interactions doivent être claires et prévisibles.
+
+- Robuste : le site doit être compatible avec une grande variété de technologies d’assistance.
+
+DAvis intègre ces principes dès la conception pour garantir une expérience universelle, éthique et durable.
+
+## 🚀 Participer au projet : workflow de développement
 Nous suivons une méthode collaborative basée sur le versionnage Git. Voici les principales étapes du workflow :
 
 ### Création d’une branche par fonctionnalité (feature/nom-de-la-fonctionnalité)
@@ -38,12 +78,12 @@ Le projet est doté d'un pipeline d'intégration continue pour assurer qualité 
 🚀 Déploiement automatique sur GitHub Pages à chaque mise à jour de la branche main
 
 ## 👥 Équipe
-Lead Développeuse
+Lead
 - Maria Petersen
 
 Développeurs
 
-- Aless
-- Léo
-- Lucas
-- Benjamin 
+- Alessandro Garau 
+- Léo Sun
+- Lucas Miranda
+- Benjamin Schinkel
