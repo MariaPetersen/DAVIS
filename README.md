@@ -70,12 +70,24 @@ Création d’une Pull Request de develop vers main
 
 Revue de code et validations avant déploiement
 
-## ⚙️ Intégration Continue / Déploiement (CI/CD)
-Le projet est doté d'un pipeline d'intégration continue pour assurer qualité et automatisation :
+## 🚀 Déploiement continu avec GitHub Actions
+Le projet DAvis utilise GitHub Actions pour automatiser l’optimisation et le déploiement sur GitHub Pages à chaque push sur la branche main.
 
-✅ Minification automatique des fichiers JavaScript et CSS
+### 📦 Objectifs du workflow CI/CD
+- Optimisation maximale des ressources front-end (HTML/CSS/JS/images/fonts)
 
-🚀 Déploiement automatique sur GitHub Pages à chaque mise à jour de la branche main
+- Création d’un dossier dist/ propre et allégé
+
+- Déploiement automatisé vers GitHub Pages
+
+### ✅ Avantages
+- Performance : ressources ultra-légères pour un chargement rapide, même sur mobile
+
+- Accessibilité préservée : les optimisations n’affectent pas la lisibilité des contenus ni la compatibilité avec les lecteurs d’écran
+
+- Zéro configuration serveur : entièrement statique, simple à héberger
+
+- Automatisé : aucun effort manuel après push
 
 ## 👥 Équipe
 Lead
