@@ -1,6 +1,8 @@
+
 @font-face {
     font-family: "Expose";
-    src: url("../fonts/Expose-Regular.woff") format("woff");
+    src: url("../fonts/Expose-Regular.woff2") format("woff2"),
+        url("../fonts/Expose-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,7 +10,8 @@
 
 @font-face {
     font-family: "Expose";
-    src: url("../fonts/Expose-Medium.woff") format("woff");
+    src: url("../fonts/Expose-Medium.woff2") format("woff2"),
+        url("../fonts/Expose-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -16,7 +19,8 @@
 
 @font-face {
     font-family: "Expose";
-    src: url("../fonts/Expose-Bold.woff") format("woff");
+    src: url("../fonts/Expose-Bold.woff2") format("woff2"),
+        url("../fonts/Expose-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -24,11 +28,13 @@
 
 @font-face {
     font-family: "Expose";
-    src: url("../fonts/Expose-Black.woff") format("woff");
+    src: url("../fonts/Expose-Black.woff2") format("woff2"),
+        url("../fonts/Expose-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
+
 
 /* Variables */
 :root {
@@ -40,6 +46,7 @@
 /* Usage */
 
 body {
+    font-family: "Expose", Arial, sans-serif;
     font-family: var(--font-family);
     line-height: 1.6;
     max-width: 1200px;
@@ -48,22 +55,26 @@ body {
 }
 
 h1 {
-    font-weight: 700; /* Black */
+    font-weight: 700;
+    /* Black */
     font-size: 2.25rem;
 }
 
 h2 {
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    /* Bold */
     font-size: 1.875rem;
 }
 
 h3 {
-    font-weight: 500; /* Medium */
+    font-weight: 500;
+    /* Medium */
     font-size: 1.5rem;
 }
 
 h4 {
-    font-weight: 400; /* Regular */
+    font-weight: 400;
+    /* Regular */
     font-size: 1.25rem;
 }
 
@@ -71,7 +82,8 @@ h4 {
 a {
     color: var(--color-primary, #003366);
     text-decoration: underline;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
+    /* Regular */
 }
 
 a:focus,
@@ -85,7 +97,8 @@ a:hover {
 /* Buttons */
 button {
     font: inherit;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    /* Bold */
 
     background-color: var(--color-primary, #003366);
 
