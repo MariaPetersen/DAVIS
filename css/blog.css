@@ -10,9 +10,10 @@
 
 .portfolio-container {
     border: solid 1px;
+    border-radius: 20px;
     border-radius: var(--border-radius, 20px);
     overflow: hidden;
-
+    max-width: 380px;
 }
 
 .portfolio-content {
