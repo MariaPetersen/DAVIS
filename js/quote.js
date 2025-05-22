@@ -12,7 +12,7 @@
         inputSujet.placeholder = "Description de la prestation";
         inputSujet.className = "prestation-sujet";
         inputSujet.required = true;
-        inputPrix.setAttribute("aria-label", "Description de la prestation");
+        inputSujet.setAttribute("aria-label", "Description de la prestation");
 
         var inputPrix = document.createElement("input");
         inputPrix.type = "number";
