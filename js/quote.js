@@ -86,6 +86,7 @@
     localStorage.setItem('devis', JSON.stringify(anciensDevis));
 
     output.hidden = false;
+    output.setAttribute('aria-hidden', 'false');
     output.scrollIntoView({ behavior: 'smooth' });
   };
 })();
