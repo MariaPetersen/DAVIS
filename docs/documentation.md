@@ -2,7 +2,7 @@
 
 ## 🎨 Présentation
 
-**DAvis** est un générateur de devis conçu pour les directeurs artistiques, qu’ils soient freelances ou en agence. L’application permet de créer facilement des devis professionnels, personnalisables et exportables en PDF, avec un accent fort sur l’accessibilité (conformité WCAG 2.2 AAA) et la performance.
+**DAvis** est un générateur de devis conçu pour les directeurs artistiques, qu’ils soient freelances ou en agence. L’application permet de créer facilement des devis professionnels, personnalisables et exportables en PDF, avec un accent fort sur l’accessibilité (conformité WCAG 2.1 AAA) et la performance.
 
 ---
 
@@ -64,8 +64,8 @@ Toutes les données sont gérées côté client (dans localStorage ou objets JS)
 
 Le projet peut être déployé tel quel sur GitHub Pages, Netlify ou tout hébergement statique
 
-## ♿ Accessibilité (WCAG 2.2 AAA)
-DAvis est développé selon les standards WCAG 2.2 niveau AAA, garantissant un accès équitable à tous les utilisateurs, y compris ceux en situation de handicap.
+## ♿ Accessibilité (WCAG 2.1 AAA)
+DAvis est développé selon les standards WCAG 2.1 niveau AAA, garantissant un accès équitable à tous les utilisateurs, y compris ceux en situation de handicap.
 
 Principes respectés :
 Perceptible : contrastes > 7:1, textes alternatifs, contenus clairs et structurés
