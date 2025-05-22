@@ -12,33 +12,36 @@
 </head>
 
 <body aria-label="Page du générateur de devis">
-  <main class="container">
-    <header class="header-return">
-      <nav class="top-nav" aria-label="Navigation principale">
-        <a href="index.html" class="back-button" aria-label="Retour au portfolio">
-          <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-          <span>Retour</span>
-        </a>
-      </nav>
-      <h1 class="title">Historique de mes devis</h1>
-    </header>
-    <main>
-
-    </main>
-    <footer>
-      <div class="contact-links">
-        <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
-          Contact
-        </a>
-        <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
-          rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </div>
-      <p>&copy; 2025 - Tous droits réservés</p>
-    </footer>
+  <header class="header-return">
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a href="index.html" class="back-button" aria-label="Retour au portfolio">
+        <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
+        <span>Retour</span>
+      </a>
+    </nav>
+    <h1 class="title">Historique de mes devis</h1>
+  </header>
+  <main>
+    <section id="devis-historique" aria-labelledby="titre-historique">
+      <h2 id="titre-historique">Liste des devis enregistrés</h2>
+      <section id="liste-devis" aria-label="Historique des devis">
+        <!-- Devis dynamiquement ajoutés ici -->
+      </section>
+    </section>
   </main>
-  <script src="./js/quote.js"></script>
+  <footer>
+    <div class="contact-links">
+      <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
+        Contact
+      </a>
+      <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
+        rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+    <p>&copy; 2025 - Tous droits réservés</p>
+  </footer>
+  <script src="./js/history.js"></script>
 </body>
 
 </html>
