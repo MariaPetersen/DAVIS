@@ -18,8 +18,8 @@
 
   function addPrestation() {
     var wrapper = el('div', { class: 'prestation-item' }, container);
-    el('input', { type: 'text', placeholder: 'Sujet', class: 'sujet', required: true }, wrapper);
-    el('input', { type: 'number', placeholder: 'Prix (€ HT)', class: 'prix', required: true, min: 0 }, wrapper);
+    el('input', { type: 'text', placeholder: 'Sujet', class: 'sujet', required: true, "aria-label": "Sujet de la prestation" }, wrapper);
+    el('input', { type: 'number', placeholder: 'Prix (€ HT)', class: 'prix', required: true, min: 0, "aria-label": "Prix de la prestation sans taxe" }, wrapper);
     el('button', {
       type: 'button', class: 'remove-btn', text: 'Supprimer', onclick: function () {
         container.removeChild(wrapper);

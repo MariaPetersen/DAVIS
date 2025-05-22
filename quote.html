@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="./css/quote.css" />
 </head>
 
-<body aria-label="Formulaire de génération de devis">
+<body aria-label="Page du formulaire de génération de devis">
   <header class="header-return">
     <nav class="top-nav" aria-label="Navigation principale">
-      <a href="index.html" class="back-button" aria-label="Retour au portfolio">
+      <a href="index.html" class="back-button" aria-label="Retour à l'accueil">
         <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
         <span>Retour</span>
       </a>
@@ -21,22 +21,23 @@
     <h1 class="title">Création d’un devis</h1>
   </header>
   <main class="container">
-    <form id="devis-form">
+    <form id="devis-form" aria-label="Formulaire de génération de devis">
       <fieldset>
         <legend>Informations client</legend>
-        <label for="client-nom">Nom du client
-          <input type="text" id="client-nom" required>
-        </label>
-        <label for="client-email">Email
-          <input type="email" id="client-email" required>
-        </label>
-        <label for="devis-date">Date du devis
-          <input type="date" id="devis-date" required>
-        </label>
-        <label for="devis-validite">Valable jusqu’au
-          <input type="date" id="devis-validite">
-        </label>
+      
+        <label for="client-nom" aria-hidden="true">Nom du client</label>
+        <input type="text" id="client-nom" required aria-label="Nom du client">
+      
+        <label for="client-email" aria-hidden="true">Email</label>
+        <input type="email" id="client-email" required aria-label="Email">
+      
+        <label for="devis-date" aria-hidden="true">Date du devis</label>
+        <input type="date" id="devis-date" required aria-label="Date du devis">
+      
+        <label for="devis-validite" aria-hidden="true">Valable jusqu’au</label>
+        <input type="date" id="devis-validite" aria-label="Valable jusqu’au">
       </fieldset>
+      
 
       <fieldset>
         <legend>Prestations</legend>
