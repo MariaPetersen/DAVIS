@@ -37,7 +37,7 @@ cd davis
 ```text
 davis/ 
     ├── index.html # Page d’accueil principale
-    ├── pages/ # Pages HTML secondaires (ex : about.html, contact.html) 
+    ├── *.html #Pages du projet
     ├── fonts/ # Polices personnalisées du projet (WOFF, WOFF2, etc.) 
     ├── css/ 
         └── styles.css # Feuille de styles principale 
