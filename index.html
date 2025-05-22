@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Générateur de devis pour un directeur artistique">
+    <meta name="description" content="Générateur de devis pour un directeur artistique" />
     <title>DAVIS - Accueil</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/home.css" />
@@ -17,9 +17,14 @@
         <h1>DAvis</h1>
     </header>
 
-    <main id="devis" role="main">
-        <section aria-labelledby="section-devis" class="devis-section">
-            <div class="left-column">
+    <main id="devis" role="main" class="devis-section">
+        <nav role="navigation" aria-label="Navigation principale">
+            <a href="quote.html" class="button" aria-label="Générer un devis">Générer un devis</a>
+            <a href="history.html" class="button" aria-label="Générer un devis">Historique de mes devis</a>
+            <a href="blog.html" class="button" aria-label="Voir le blog">Blog</a>
+        </nav>
+        <div class="left-column">
+            <section aria-labelledby="section-devis">
                 <h2 id="section-devis">
                     Simulez facilement vos devis en tant que DA
                 </h2>
@@ -31,6 +36,8 @@
                     et personnalisés. Gagnez du temps et formalisez vos
                     prestations en toute simplicité.
                 </p>
+            </section>
+            <section aria-labelledby="section-devis">
                 <h2 class="who-ami">Qui sommes-nous ?</h2>
                 <p class="who-ami">
                     Chez DAvis, nous accompagnons les Directeurs Artistiques
@@ -43,12 +50,8 @@
                     permettre de vous concentrer sur ce que vous faites de
                     mieux — créer.
                 </p>
-            </div>
-            <nav role="navigation" aria-label="Navigation principale">
-                <a href="quote.html" class="button" aria-label="Générer un devis">Générer un devis</a>
-                <a href="history.html" class="button" aria-label="Générer un devis">Historique de mes devis</a>
-                <a href="blog.html" class="button" aria-label="Voir le blog">Blog</a>
-            </nav>
+            </section>
+        </div>
         </section>
     </main>
 
