@@ -6,7 +6,7 @@
 
     // Si aucun devis n'est enregistré dans le localStorage, afficher un message
     if (devisArray.length === 0) {
-        var p = document.createElement('p');
+        var p = document.createElement("p");
         p.textContent = "Aucun devis enregistré pour le moment.";
         historiqueContainer.appendChild(p);
         return;
@@ -62,14 +62,14 @@
         thead.appendChild(trHead);
         table.appendChild(thead);
 
-        var tbody = document.createElement('tbody');
+        var tbody = document.createElement("tbody");
         for (var j = 0; j < devis.prestations.length; j++) {
             var ligne = devis.prestations[j];
-            var tr = document.createElement('tr');
-            var tdSujet = document.createElement('td');
+            var tr = document.createElement("tr");
+            var tdSujet = document.createElement("td");
             tdSujet.textContent = ligne.sujet;
-            var tdPrix = document.createElement('td');
-            tdPrix.textContent = ligne.prix.toFixed(2) + ' € HT';
+            var tdPrix = document.createElement("td");
+            tdPrix.textContent = ligne.prix.toFixed(2) + " € HT";
             tr.appendChild(tdSujet);
             tr.appendChild(tdPrix);
             tbody.appendChild(tr);
@@ -100,10 +100,12 @@
         btn.setAttribute('aria-label', 'Imprimer le devis de ' + devis.nom);
         btn.onclick = (function (s) {
             return function () {
-                var win = window.open('', '', 'width=800,height=600');
-                win.document.write('<html><head><title>Impression</title><link rel="stylesheet" href="./css/styles.css"></head><body>');
+                var win = window.open("", "", "width=800,height=600");
+                win.document.write(
+                    '<html><head><title>Impression</title><link rel="stylesheet" href="./css/styles.css"></head><body>'
+                );
                 win.document.write(s.outerHTML);
-                win.document.write('</body></html>');
+                win.document.write("</body></html>");
                 win.document.close();
                 win.print();
             };

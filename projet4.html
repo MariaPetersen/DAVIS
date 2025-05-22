@@ -1,62 +1,113 @@
 <!-- Alessandro GARARU -->
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Générateur de devis pour un directeur artistique"
+        />
+        <title>Projet Photo : photographie abstraite et expérimentale</title>
+        <link rel="stylesheet" href="css/projet.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link
+            rel="stylesheet"
+            href="css/reduced-motion.css"
+            media="(prefers-reduced-motion: reduce)"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Générateur de devis pour un directeur artistique">
-    <title>Projet 4 - Portfolio</title>
-    <link rel="stylesheet" href="css/projet.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reduced-motion.css" media="(prefers-reduced-motion: reduce)">
-</head>
+    <body aria-label="Article sur le projet quatre">
+        <header class="header-return">
+            <nav class="top-nav" aria-label="Navigation principale">
+                <a
+                    href="blog.html"
+                    class="back-button"
+                    aria-label="Retour au blog"
+                >
+                    <img
+                        src="./assets/en-arriere.webp"
+                        alt=""
+                        class="back-arrow"
+                        aria-hidden="true"
+                    />
+                    <span>Retour</span>
+                </a>
+            </nav>
+            <h1>Projet Photo : photographie abstraite et expérimentale</h1>
+        </header>
 
-<body aria-label="Article sur le projet quatre">
-    <header class="header-return">
-        <nav class="top-nav" aria-label="Navigation principale">
-            <a href="blog.html" class="back-button" aria-label="Retour au blog">
-                <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-                <span>Retour</span>
-            </a>
-        </nav>
-        <h1>Projet 4</h1>
-    </header>
+        <main id="main-content" class="project-container">
+            <section
+                class="project-description"
+                aria-labelledby="project-desc-title"
+            >
+                <h2 id="project-desc-title" class="visually-hidden">
+                    Description du projet
+                </h2>
+                <p>
+                    Ce projet explore l'art de la photographie abstraite et
+                    expérimentale, où je me suis concentré sur la création
+                    d'images qui transcendent la réalité visible. En utilisant
+                    des techniques de double exposition, des jeux de lumière et
+                    des compositions non conventionnelles, j'ai créé une série
+                    d'images qui invitent à la contemplation et à
+                    l'interprétation personnelle. Chaque photographie est une
+                    exploration des formes, des textures et des couleurs,
+                    transformant l'ordinaire en extraordinaire.
+                </p>
+            </section>
 
-    <main id="main-content" class="project-container">
-        <section class="project-description" aria-labelledby="project-desc-title">
-            <h2 id="project-desc-title" class="visually-hidden">Description du projet</h2>
-            <p>
-                Ce projet explore l'art de la photographie abstraite et expérimentale, où je me suis concentré sur la création d'images qui transcendent la réalité visible. En utilisant des techniques de double exposition, des jeux de lumière et des compositions non conventionnelles, j'ai créé une série d'images qui invitent à la contemplation et à l'interprétation personnelle. Chaque photographie est une exploration des formes, des textures et des couleurs, transformant l'ordinaire en extraordinaire.
-            </p>
-        </section>
+            <section
+                class="visualization"
+                aria-labelledby="visualization-title"
+            >
+                <h2 id="visualization-title">Visualisation</h2>
+                <div class="image-gallery" role="list">
+                    <figure role="listitem">
+                        <img
+                            src="./assets/projet4_image1.webp"
+                            alt="Composition abstraite avec des formes géométriques et des reflets lumineux"
+                            class="project-image"
+                            loading="lazy"
+                            width="350"
+                            height="350"
+                        />
+                    </figure>
+                    <figure role="listitem">
+                        <img
+                            src="./assets/projet4_image2.webp"
+                            alt="Double exposition créant une fusion surréaliste de paysages urbains"
+                            class="project-image"
+                            loading="lazy"
+                            width="350"
+                            height="350"
+                        />
+                    </figure>
+                </div>
+            </section>
+        </main>
 
-        <section class="visualization" aria-labelledby="visualization-title">
-            <h2 id="visualization-title">Visualisation</h2>
-            <div class="image-gallery" role="list">
-                <figure role="listitem">
-                    <img src="./assets/projet4_image1.png" alt="Composition abstraite avec des formes géométriques et des reflets lumineux"
-                        class="project-image" loading="lazy">
-                </figure>
-                <figure role="listitem">
-                    <img src="./assets/projet4_image2.png" alt="Double exposition créant une fusion surréaliste de paysages urbains"
-                        class="project-image" loading="lazy">
-                </figure>
+        <footer>
+            <div class="contact-links">
+                <a
+                    href="mailto:votre@email.com"
+                    class="contact-link"
+                    aria-label="Envoyer un email"
+                >
+                    Contact
+                </a>
+                <a
+                    href="https://linkedin.com/in/votre-profil"
+                    class="contact-link"
+                    aria-label="Visiter mon profil LinkedIn"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contact-links">
-            <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
-                Contact
-            </a>
-            <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
-                rel="noopener noreferrer">
-                LinkedIn
-            </a>
-        </div>
-        <p>&copy; 2025 - Tous droits réservés</p>
-    </footer>
-</body>
-</html> 
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+    </body>
+</html>

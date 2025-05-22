@@ -3,17 +3,17 @@
 DAvis est une application pensée pour simplifier la création de devis professionnels destinés aux directeurs artistiques, freelances ou en agence. Elle permet de générer rapidement des devis clairs, personnalisables et adaptés aux spécificités des métiers créatifs.
 
 ### 🧩 Fonctionnalités principales :
-Génération rapide de devis avec des modèles adaptés aux prestations artistiques.
+- Génération rapide de devis avec des modèles adaptés aux prestations artistiques.
 
-Personnalisation des prestations : ajout facile de lignes, ajustement des tarifs, etc.
-
-Base de prestations fréquentes avec descriptions pré-remplies pour gagner du temps
+- Personnalisation des prestations : ajout facile de lignes, ajustement des tarifs, etc.
 
 - Calcul automatique du total, des remises et de la TVA
 
 - Export en PDF professionnel prêt à être envoyé au client
 
 - Interface intuitive et épurée
+
+- Historique des devis déjà générés
 
 ### 🎯 Objectif :
 Offrir un outil simple, rapide et fiable pour permettre aux directeurs artistiques de valoriser leur travail à travers des devis clairs, bien présentés et alignés avec les standards du métier.
