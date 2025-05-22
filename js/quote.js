@@ -12,6 +12,7 @@
         inputSujet.placeholder = "Description de la prestation";
         inputSujet.className = "prestation-sujet";
         inputSujet.required = true;
+        inputSujet.setAttribute("aria-label", "Description de la prestation");
 
         var inputPrix = document.createElement("input");
         inputPrix.type = "number";
@@ -20,6 +21,7 @@
         inputPrix.placeholder = "Prix HT";
         inputPrix.className = "prestation-prix";
         inputPrix.required = true;
+        inputPrix.setAttribute("aria-label", "Prix de la prestation sans taxe");
 
         var btnSuppr = document.createElement("button");
         btnSuppr.type = "button";
