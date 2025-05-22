@@ -2,7 +2,8 @@
 
 ## 🎨 Présentation
 
-**DAvis** est un générateur de devis conçu pour les directeurs artistiques, qu’ils soient freelances ou en agence. L’application permet de créer facilement des devis professionnels, personnalisables et exportables en PDF, avec un accent fort sur l’accessibilité (conformité WCAG 2.1 AAA) et la performance.
+**DAvis** est un générateur de devis conçu pour les directeurs artistiques, qu’ils soient freelances ou en agence. L’application permet de créer facilement des devis professionnels, personnalisables et exportables en PDF via la fonction native du navigateur (window.print()), garantissant simplicité, performance et compatibilité maximale.
+
 
 ---
 
