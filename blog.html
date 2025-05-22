@@ -1,103 +1,225 @@
-<!-- Page portfolio de Maria PETERSEN-->
+<!-- Page blog de Maria PETERSEN -->
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Générateur de devis pour un directeur artistique"
+        />
+        <title>DAVIS - portfolio</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Générateur de devis pour un directeur artistique">
-    <title>DAVIS - portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/blog.css">
-</head>
+        <!-- Préchargement des polices critiques -->
+        <link
+            rel="preload"
+            href="./fonts/Expose-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="./fonts/Expose-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
 
-<body aria-label="Blog du générateur de devis pour directeur artistiques">
-    <header class="header-return">
-        <nav class="top-nav" aria-label="Navigation principale">
-            <a href="index.html" class="back-button" aria-label="Retour à la page d'accueil">
-                <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-                <span>Retour</span>
-            </a>
-        </nav>
-        <h1>Blog</h1>
-    </header>
-    <main>
-        <section id="portfolio" aria-labelledby="portfolio-heading">
-            <h2 id="portfolio-heading">Bienvenu.e sur le Blog de DAvis</h2>
-            <div class="articles-container">
-                <article class="portfolio-article" role="article" aria-labelledby="titre-projet-photo">
-                    <h3 id="titre-projet-photo">Projet Photo : photographie urbaine</h3>
-                    <div class="portfolio-container">
-                        <div class="image-container">
-                            <img src="./assets/projet1_image1.webp" alt="Image du projet photographie urbaine"
-                                class="portfolio-image" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <p>Exploration de l'art de la photographie urbaine
-                            </p>
-                            <p><a href="projet1.html" aria-label="Voir le projet de photographie urbaine">Voir le projet</a></p>
-                        </div>
-                    </div>
-                </article>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/blog.css" />
+    </head>
 
-                <article class="portfolio-article" role="article" aria-labelledby="titre-projet-photo">
-                    <h3 id="titre-projet-photo">Projet Photo : photographie de nature</h3>
-                    <div class="portfolio-container">
-                        <div class="image-container">
-                            <img src="./assets/projet2_image1.webp" alt="Image du projet nature"
-                                class="portfolio-image" loading="lazy">
-                        </div>
-                        <div class="portfolio-content">
-                            <p>Ce projet photographique explore la beauté de la nature à travers une série d'images
-                                capturant des paysages sauvages et des moments éphémères.</p>
-                            <p><a href="projet2.html" aria-label="Voir le projet de photographie nature">Voir le projet</a></p>
-                        </div>
-                    </div>
-                </article>
+    <body aria-label="Blog du générateur de devis pour directeur artistiques">
+        <header class="header-return">
+            <nav class="top-nav" aria-label="Navigation principale">
+                <a
+                    href="index.html"
+                    class="back-button"
+                    aria-label="Retour à la page d'accueil"
+                >
+                    <img
+                        src="./assets/en-arriere.webp"
+                        alt=""
+                        class="back-arrow"
+                        aria-hidden="true"
+                    />
+                    <span>Retour</span>
+                </a>
+            </nav>
+            <h1>Blog</h1>
+        </header>
 
-                <article class="portfolio-article" role="article" aria-labelledby="titre-projet-photo">
-                    <h3 id="titre-projet-photo">Projet Photo : photographie de rue</h3>
-                    <div class="portfolio-container">
-                        <div class="image-container">
-                            <img src="./assets/projet3_image1.webp" alt="Image du projet photographie de rue"
-                                class="portfolio-image" loading="lazy">
+        <main>
+            <section id="portfolio" aria-labelledby="portfolio-heading">
+                <h2 id="portfolio-heading">Bienvenu.e sur le Blog de DAvis</h2>
+                <div class="articles-container">
+                    <article
+                        class="portfolio-article"
+                        role="article"
+                        aria-labelledby="titre-projet-photo"
+                    >
+                        <h3 id="titre-projet-photo">
+                            Projet Photo : photographie urbaine
+                        </h3>
+                        <div class="portfolio-container">
+                            <div class="image-container">
+                                <img
+                                    src="./assets/projet1_image1.webp"
+                                    alt="Image du projet photographie urbaine"
+                                    class="portfolio-image"
+                                    width="380"
+                                    height="200"
+                                />
+                            </div>
+                            <div class="portfolio-content">
+                                <p>
+                                    Exploration de l'art de la photographie
+                                    urbaine
+                                </p>
+                                <p>
+                                    <a
+                                        href="projet1.html"
+                                        aria-label="Voir le projet de photographie urbaine"
+                                        >Voir le projet</a
+                                    >
+                                </p>
+                            </div>
                         </div>
-                        <div class="portfolio-content">
-                            <p>Ce projet se concentre sur la photographie de rue et le portrait spontané, capturant
-                                l'authenticité des moments quotidiens et des expressions humaines.</p>
-                            <p><a href="projet3.html" aria-label="Voir le projet de photographie de rue">Voir le projet</a></p>
+                    </article>
+
+                    <article
+                        class="portfolio-article"
+                        role="article"
+                        aria-labelledby="titre-projet-photo"
+                    >
+                        <h3 id="titre-projet-photo">
+                            Projet Photo : photographie de nature
+                        </h3>
+                        <div class="portfolio-container">
+                            <div class="image-container">
+                                <img
+                                    src="./assets/projet2_image1.webp"
+                                    alt="Image du projet nature"
+                                    class="portfolio-image"
+                                    loading="lazy"
+                                    width="380"
+                                    height="200"
+                                />
+                            </div>
+                            <div class="portfolio-content">
+                                <p>
+                                    Ce projet photographique explore la beauté
+                                    de la nature à travers une série d'images
+                                    capturant des paysages sauvages et des
+                                    moments éphémères.
+                                </p>
+                                <p>
+                                    <a
+                                        href="projet2.html"
+                                        aria-label="Voir le projet de photographie nature"
+                                        >Voir le projet</a
+                                    >
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="portfolio-article" role="article" aria-labelledby="titre-projet-photo">
-                    <h3 id="titre-projet-photo">Projet Photo : photographie abstraite et expérimentale</h3>
-                    <div class="portfolio-container">
-                        <div class="image-container">
-                            <img src="./assets/projet4_image1.webp" alt="Image du projet photographie abstraite"
-                                class="portfolio-image" loading="lazy">
+                    </article>
+
+                    <article
+                        class="portfolio-article"
+                        role="article"
+                        aria-labelledby="titre-projet-photo"
+                    >
+                        <h3 id="titre-projet-photo">
+                            Projet Photo : photographie de rue
+                        </h3>
+                        <div class="portfolio-container">
+                            <div class="image-container">
+                                <img
+                                    src="./assets/projet3_image1.webp"
+                                    alt="Image du projet photographie de rue"
+                                    class="portfolio-image"
+                                    loading="lazy"
+                                    width="380"
+                                    height="200"
+                                />
+                            </div>
+                            <div class="portfolio-content">
+                                <p>
+                                    Ce projet se concentre sur la photographie
+                                    de rue et le portrait spontané, capturant
+                                    l'authenticité des moments quotidiens et des
+                                    expressions humaines.
+                                </p>
+                                <p>
+                                    <a
+                                        href="projet3.html"
+                                        aria-label="Voir le projet de photographie de rue"
+                                        >Voir le projet</a
+                                    >
+                                </p>
+                            </div>
                         </div>
-                        <div class="portfolio-content">
-                            <p>Ce projet explore l'art de la photographie abstraite et expérimentale</p>
-                            <p><a href="projet4.html" aria-label="Voir le projet de photographie abstraite et expérimentale">Voir le projet</a></p>
+                    </article>
+
+                    <article
+                        class="portfolio-article"
+                        role="article"
+                        aria-labelledby="titre-projet-photo"
+                    >
+                        <h3 id="titre-projet-photo">
+                            Projet Photo : photographie abstraite et
+                            expérimentale
+                        </h3>
+                        <div class="portfolio-container">
+                            <div class="image-container">
+                                <img
+                                    src="./assets/projet4_image1.webp"
+                                    alt="Image du projet photographie abstraite"
+                                    class="portfolio-image"
+                                    loading="lazy"
+                                    width="380"
+                                    height="200"
+                                />
+                            </div>
+                            <div class="portfolio-content">
+                                <p>
+                                    Ce projet explore l'art de la photographie
+                                    abstraite et expérimentale
+                                </p>
+                                <p>
+                                    <a
+                                        href="projet4.html"
+                                        aria-label="Voir le projet de photographie abstraite et expérimentale"
+                                        >Voir le projet</a
+                                    >
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="contact-links">
+                <a
+                    href="mailto:votre@email.com"
+                    class="contact-link"
+                    aria-label="Envoyer un email"
+                >
+                    Contact
+                </a>
+                <a
+                    href="https://linkedin.com/in/votre-profil"
+                    class="contact-link"
+                    aria-label="Visiter mon profil LinkedIn"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contact-links">
-            <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
-                Contact
-            </a>
-            <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
-                rel="noopener noreferrer">
-                LinkedIn
-            </a>
-        </div>
-        <p>&copy; 2025 - Tous droits réservés</p>
-    </footer>
-</body>
-
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+    </body>
 </html>

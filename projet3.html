@@ -1,62 +1,112 @@
 <!-- Alessandro GARARU -->
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Générateur de devis pour un directeur artistique"
+        />
+        <title>Projet Photo : photographie de rue</title>
+        <link rel="stylesheet" href="css/projet.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link
+            rel="stylesheet"
+            href="css/reduced-motion.css"
+            media="(prefers-reduced-motion: reduce)"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Générateur de devis pour un directeur artistique">
-    <title>Projet Photo : photographie de rue</title>
-    <link rel="stylesheet" href="css/projet.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reduced-motion.css" media="(prefers-reduced-motion: reduce)">
-</head>
+    <body aria-label="Article sur le projet trois">
+        <header class="header-return">
+            <nav class="top-nav" aria-label="Navigation principale">
+                <a
+                    href="blog.html"
+                    class="back-button"
+                    aria-label="Retour au blog"
+                >
+                    <img
+                        src="./assets/en-arriere.webp"
+                        alt=""
+                        class="back-arrow"
+                        aria-hidden="true"
+                    />
+                    <span>Retour</span>
+                </a>
+            </nav>
+            <h1>Projet Photo : photographie de rue</h1>
+        </header>
 
-<body aria-label="Article sur le projet trois">
-    <header class="header-return">
-        <nav class="top-nav" aria-label="Navigation principale">
-            <a href="blog.html" class="back-button" aria-label="Retour au blog">
-                <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-                <span>Retour</span>
-            </a>
-        </nav>
-        <h1>Projet Photo : photographie de rue</h1>
-    </header>
+        <main id="main-content" class="project-container">
+            <section
+                class="project-description"
+                aria-labelledby="project-desc-title"
+            >
+                <h2 id="project-desc-title" class="visually-hidden">
+                    Description du projet
+                </h2>
+                <p>
+                    Ce projet se concentre sur la photographie de rue et le
+                    portrait spontané, capturant l'authenticité des moments
+                    quotidiens et des expressions humaines. À travers une
+                    approche documentaire, j'ai cherché à immortaliser des
+                    instants de vie urbaine, des émotions pures et des
+                    interactions sociales. Les images de cette série reflètent
+                    la diversité culturelle et la richesse des expériences
+                    humaines dans notre société contemporaine.
+                </p>
+            </section>
 
-    <main id="main-content" class="project-container">
-        <section class="project-description" aria-labelledby="project-desc-title">
-            <h2 id="project-desc-title" class="visually-hidden">Description du projet</h2>
-            <p>
-                Ce projet se concentre sur la photographie de rue et le portrait spontané, capturant l'authenticité des moments quotidiens et des expressions humaines. À travers une approche documentaire, j'ai cherché à immortaliser des instants de vie urbaine, des émotions pures et des interactions sociales. Les images de cette série reflètent la diversité culturelle et la richesse des expériences humaines dans notre société contemporaine.
-            </p>
-        </section>
+            <section
+                class="visualization"
+                aria-labelledby="visualization-title"
+            >
+                <h2 id="visualization-title">Visualisation</h2>
+                <div class="image-gallery" role="list">
+                    <figure role="listitem">
+                        <img
+                            src="./assets/projet3_image1.webp"
+                            alt="Portrait d'un artiste de rue en pleine performance"
+                            class="project-image"
+                            loading="lazy"
+                            width="350"
+                            height="350"
+                        />
+                    </figure>
+                    <figure role="listitem">
+                        <img
+                            src="./assets/projet3_image2.webp"
+                            alt="Scène de vie quotidienne dans un marché local"
+                            class="project-image"
+                            loading="lazy"
+                            width="350"
+                            height="350"
+                        />
+                    </figure>
+                </div>
+            </section>
+        </main>
 
-        <section class="visualization" aria-labelledby="visualization-title">
-            <h2 id="visualization-title">Visualisation</h2>
-            <div class="image-gallery" role="list">
-                <figure role="listitem">
-                    <img src="./assets/projet3_image1.webp" alt="Portrait d'un artiste de rue en pleine performance"
-                        class="project-image" loading="lazy">
-                </figure>
-                <figure role="listitem">
-                    <img src="./assets/projet3_image2.webp" alt="Scène de vie quotidienne dans un marché local"
-                        class="project-image" loading="lazy">
-                </figure>
+        <footer>
+            <div class="contact-links">
+                <a
+                    href="mailto:votre@email.com"
+                    class="contact-link"
+                    aria-label="Envoyer un email"
+                >
+                    Contact
+                </a>
+                <a
+                    href="https://linkedin.com/in/votre-profil"
+                    class="contact-link"
+                    aria-label="Visiter mon profil LinkedIn"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contact-links">
-            <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
-                Contact
-            </a>
-            <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
-                rel="noopener noreferrer">
-                LinkedIn
-            </a>
-        </div>
-        <p>&copy; 2025 - Tous droits réservés</p>
-    </footer>
-</body>
-</html> 
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+    </body>
+</html>

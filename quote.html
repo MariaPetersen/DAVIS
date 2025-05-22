@@ -1,91 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head class="head">
+        <meta charset="UTF-8" class="meta" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            class="meta"
+        />
+        <meta
+            name="description"
+            content="Générateur de devis pour un directeur artistique"
+        />
+        <title class="title-tag">Création d’un devis - DAVIS</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/quote.css" />
+    </head>
 
-<head class="head">
-  <meta charset="UTF-8" class="meta" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" class="meta" />
-  <meta name="description" content="Générateur de devis pour un directeur artistique">
-  <title class="title-tag">Création d’un devis - DAVIS</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/quote.css" />
-</head>
+    <body aria-label="Formulaire de génération de devis">
+        <header class="header-return">
+            <nav class="top-nav" aria-label="Navigation principale">
+                <a
+                    href="index.html"
+                    class="back-button"
+                    aria-label="Retour au portfolio"
+                >
+                    <img
+                        src="./assets/en-arriere.webp"
+                        alt=""
+                        class="back-arrow"
+                        aria-hidden="true"
+                    />
+                    <span>Retour</span>
+                </a>
+            </nav>
+            <h1 class="title">Création d’un devis</h1>
+        </header>
+        <main class="container">
+            <form id="devis-form">
+                <fieldset>
+                    <legend>Informations client</legend>
+                    <label for="client-nom"
+                        >Nom du client
+                        <input type="text" id="client-nom" required />
+                    </label>
+                    <label for="client-email"
+                        >Email
+                        <input type="email" id="client-email" required />
+                    </label>
+                    <label for="devis-date"
+                        >Date du devis
+                        <input type="date" id="devis-date" required />
+                    </label>
+                    <label for="devis-validite"
+                        >Valable jusqu’au
+                        <input type="date" id="devis-validite" />
+                    </label>
+                </fieldset>
 
-<body aria-label="Page du formulaire de génération de devis">
-  <header class="header-return">
-    <nav class="top-nav" aria-label="Navigation principale">
-      <a href="index.html" class="back-button" aria-label="Retour à l'accueil">
-        <img src="./assets/en-arriere.webp" alt="" class="back-arrow" aria-hidden="true">
-        <span>Retour</span>
-      </a>
-    </nav>
-    <h1 class="title">Création d’un devis</h1>
-  </header>
-  <main class="container">
-    <form id="devis-form" aria-label="Formulaire de génération de devis">
-      <fieldset>
-        <legend>Informations client</legend>
-      
-        <label for="client-nom" aria-hidden="true">Nom du client</label>
-        <input type="text" id="client-nom" required aria-label="Nom du client">
-      
-        <label for="client-email" aria-hidden="true">Email</label>
-        <input type="email" id="client-email" required aria-label="Email">
-      
-        <label for="devis-date" aria-hidden="true">Date du devis</label>
-        <input type="date" id="devis-date" required aria-label="Date du devis">
-      
-        <label for="devis-validite" aria-hidden="true">Valable jusqu’au</label>
-        <input type="date" id="devis-validite" aria-label="Valable jusqu’au">
-      </fieldset>
-      
+                <fieldset>
+                    <legend>Prestations</legend>
+                    <div id="prestations-container"></div>
+                    <button
+                        type="button"
+                        id="add-prestation"
+                        aria-label="Ajouter une nouvelle ligne de prestation"
+                    >
+                        Ajouter une prestation
+                    </button>
+                </fieldset>
 
-      <fieldset>
-        <legend>Prestations</legend>
-        <div id="prestations-container"></div>
-        <button type="button" id="add-prestation" aria-label="Ajouter une nouvelle ligne de prestation">Ajouter une
-          prestation</button>
-      </fieldset>
+                <fieldset>
+                    <legend>Cession de droits</legend>
+                    <label for="duree-droits"
+                        >Durée
+                        <input
+                            type="text"
+                            id="duree-droits"
+                            placeholder="Ex : 2 ans"
+                        />
+                    </label>
+                    <label for="territoire-droits"
+                        >Territoire
+                        <input
+                            type="text"
+                            id="territoire-droits"
+                            placeholder="Ex : France, Europe"
+                        />
+                    </label>
+                    <label for="supports-droits"
+                        >Supports
+                        <input
+                            type="text"
+                            id="supports-droits"
+                            placeholder="Ex : Web, Print"
+                        />
+                    </label>
+                </fieldset>
 
-      <button type=" submit">Générer le devis</button>
-    </form>
+                <button type="submit">Générer le devis</button>
+            </form>
 
-    <section id="devis-output" hidden aria-hidden="true" aria-labelledby="devis-section-title">
-      <hr>
-      <h2 id="devis-section-title">Aperçu du devis généré</h2>
-      <p><strong>Client :</strong> <span id="out-client-nom"></span> (<span id="out-client-email"></span>)</p>
-      <p><strong>Date :</strong> <span id="out-devis-date"></span></p>
-      <p><strong>Valide jusqu’au :</strong> <span id="out-devis-validite"></span></p>
-
-      <table border="1" cellspacing="0" cellpadding="8" summary="Tableau des prestations et prix dans le devis.">
-        <thead>
-          <tr>
-            <th>Prestations</th>
-            <th>Prix (€)</th>
-          </tr>
-        </thead>
-        <tbody id="out-prestations"></tbody>
-      </table>
-
-      <p><strong>Total :</strong> <span id="out-total">0 €</span></p>
-      <p><em>Merci pour votre confiance.</em></p>
-      <p>Signature du client : ..............................................</p>
-
-      <button type="button" onclick="window.print()">Imprimer le devis</button>
-    </section>
-  </main>
-  <footer>
-    <div class="contact-links">
-      <a href="mailto:votre@email.com" class="contact-link" aria-label="Envoyer un email">
-        Contact
-      </a>
-      <a href="https://linkedin.com/in/votre-profil" class="contact-link" aria-label="Visiter mon profil LinkedIn"
-        rel="noopener noreferrer">
-        LinkedIn
-      </a>
-    </div>
-    <p>&copy; 2025 - Tous droits réservés</p>
-  </footer>
-  <script src="./js/quote.js"></script>
-</body>
-
+            <section
+                id="devis-output"
+                hidden
+                aria-hidden="true"
+                aria-labelledby="devis-preview-title"
+            >
+                <h2 id="devis-preview-title">Aperçu du devis</h2>
+            </section>
+        </main>
+        <script src="./js/quote.js"></script>
+    </body>
 </html>
