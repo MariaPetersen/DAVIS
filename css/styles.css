@@ -88,8 +88,9 @@ a {
 
 a:focus,
 a:hover {
+    color: #006699;
     color: var(--color-secondary, #006699);
-
+    outline: #006699;
     outline: 2px solid var(--color-secondary, #006699);
     outline-offset: 2px;
 }
@@ -100,8 +101,10 @@ button {
     font-weight: 700;
     /* Bold */
 
+    background-color: #003366;
     background-color: var(--color-primary, #003366);
 
+    color: #ffffff;
     color: var(--color-background, #ffffff);
 
     padding: 0.5rem 1rem;
@@ -112,8 +115,10 @@ button {
 
 button:focus,
 button:hover {
+    background-color: #006699;
     background-color: var(--color-secondary, #006699);
 
+    outline: 2px solid #006699;
     outline: 2px solid var(--color-secondary, #006699);
     outline-offset: 2px;
 }
