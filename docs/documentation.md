@@ -83,6 +83,13 @@ Attributs ARIA conformes aux rôles et aux usages
 
 Tests réguliers avec Lighthouse et VoiceOver
 
+### 🔍 Outils d’audit utilisés
+- Chrome Lighthouse (performance + accessibilité)
+- PageSpeed Insights
+- Simulations de connexions lentes 56k (devtools)
+- Tests clavier (tabindex, focus-visible)
+- Lecteurs d'écran : NVDA (Windows), VoiceOver (Mac)
+
 ## 🚀 Déploiement continu avec GitHub Actions
 Le projet DAvis utilise GitHub Actions pour automatiser l’optimisation et le déploiement sur GitHub Pages à chaque push sur la branche main.
 
