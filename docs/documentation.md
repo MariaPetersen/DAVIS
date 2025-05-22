@@ -113,7 +113,7 @@ L’application **DAvis** a été conçue pour répondre aux besoins des Directe
 - Permet à l’utilisateur de revenir sur ses anciens devis sans connexion internet ni base de données pour les imprimer si nécessaire.
 
 ```javascript
- var devisArray = JSON.parse(localStorage.getItem("devis")) || [];
+var devisArray = JSON.parse(localStorage.getItem("devis")) || [];
 devisArray.push(devisEnregistre);
 localStorage.setItem("devis", JSON.stringify(devisArray));
 ```
