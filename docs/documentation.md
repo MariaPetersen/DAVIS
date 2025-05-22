@@ -91,6 +91,44 @@ Tests réguliers avec Lighthouse et VoiceOver
 - Tests clavier (tabindex, focus-visible)
 - Lecteurs d'écran : NVDA (Windows), VoiceOver (Mac)
 
+## 🧰 Fonctionnalités de l'application
+
+L’application **DAvis** a été conçue pour répondre aux besoins des Directeurs Artistiques en proposant une interface simple, rapide et accessible.
+
+### 📝 Création de devis
+
+- Formulaire complet et intuitif pour saisir les informations du client, du projet et des prestations.
+- Calcul automatique du montant total du devis.
+- Prévisualisation directe dans l’interface.
+
+### 🖨️ Impression & export PDF
+
+- Export immédiat via la fonction native du navigateur : `window.print()`.
+- Styles CSS optimisés pour l'impression (mise en page claire, sans éléments inutiles).
+
+### 📂 Historique des devis (LocalStorage)
+
+- Tous les devis générés sont automatiquement enregistrés dans le **localStorage** du navigateur.
+- Consultation facile de l’historique via la page dédiée.
+- Permet à l’utilisateur de revenir sur ses anciens devis sans connexion internet ni base de données pour les imprimer si nécessaire.
+
+```javascript
+ var devisArray = JSON.parse(localStorage.getItem("devis")) || [];
+devisArray.push(devisEnregistre);
+localStorage.setItem("devis", JSON.stringify(devisArray));
+```
+
+### 📰 Blog intégré
+
+- Section blog avec des projets.
+- Contenu statique en HTML pour garantir performance et accessibilité.
+- Permet de renforcer la dimension informative du site.
+
+---
+
+> ✨ Toutes ces fonctionnalités ont été développées sans framework, avec une attention particulière à la **sobriété numérique**, la **compatibilité navigateur** et les **normes d’accessibilité** (WCAG 2.1 niveau AAA).
+
+
 ## 🚀 Déploiement continu avec GitHub Actions
 Le projet DAvis utilise GitHub Actions pour automatiser l’optimisation et le déploiement sur GitHub Pages à chaque push sur la branche main.
 
